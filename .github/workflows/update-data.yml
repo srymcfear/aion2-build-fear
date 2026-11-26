@@ -1,9 +1,6 @@
 name: Update AION 2 Gear Data
 
 on:
-  schedule:
-    # Tự động cập nhật mỗi 3 tiếng
-    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 permissions:
