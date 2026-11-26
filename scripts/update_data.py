@@ -74,7 +74,10 @@ def main():
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(viewport={"width": 1280, "height": 900})
+        context = browser.new_context(
+            viewport={"width": 1280, "height": 900},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        )
         page = context.new_page()
 
         for name in members:
@@ -86,7 +89,7 @@ def main():
             try:
                 # 1. PvE Meta
                 page.goto(base_url, wait_until="domcontentloaded", timeout=45000)
-                page.wait_for_selector("text=/Soul Resonance/i", timeout=30000)
+                page.get_by_text("Soul Resonance", exact=False).first.wait_for(timeout=30000)
                 page.wait_for_timeout(1500)
                 pve = extract_page_data(page)
 
@@ -115,7 +118,7 @@ def main():
 
                 # 2. PvP Meta
                 page.goto(f"{base_url}?meta=pvp", wait_until="domcontentloaded", timeout=45000)
-                page.wait_for_selector("text=/Soul Resonance/i", timeout=30000)
+                page.get_by_text("Soul Resonance", exact=False).first.wait_for(timeout=30000)
                 page.wait_for_timeout(1500)
                 pvp = extract_page_data(page)
 
@@ -143,7 +146,11 @@ def main():
                     f"PvP={pvp_block.get('score')} ({pvp_block.get('tier')}) -> {pvp_block.get('pot')}"
                 )
             except Exception as exc:
-                print(f"  ERROR: Failed to update {name}: {exc}")
+                try:
+                    title = page.title()
+                except Exception:
+                    title = "unknown"
+                print(f"  ERROR: Failed to update {name} (title='{title}'): {exc}")
 
         browser.close()
 
