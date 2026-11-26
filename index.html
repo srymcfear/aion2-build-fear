@@ -256,6 +256,7 @@
         </div>
       </div>
       <div class="roster-list" id="rosterList"></div>
+      <div class="sys-tag mono" id="syncTime" style="margin-top:auto;padding-top:12px;border-top:1px solid var(--border);font-size:11px;">Sync: Dữ liệu cục bộ</div>
     </aside>
 
     <main class="main">
@@ -283,7 +284,7 @@
   </div>
 
   <script>
-    const AVATARS = {
+    let AVATARS = {
       TheAres: "https://aion2index.com/img/p/2502/704531866706946873?w=320",
       KingDoggo: "https://aion2index.com/img/p/2502/704250391730266827?w=320",
       MusangKing: "https://aion2index.com/img/p/2502/704250391730265653?w=320",
@@ -292,7 +293,7 @@
       HHeo: "https://aion2index.com/img/p/2502/704250391730344698?w=320"
     };
 
-    const ICONS = {
+    let ICONS = {
       "Abyssal Bracelet": "https://aion2index.com/img/g/Icon_ACC_Bracelet_n_02.png",
       "Dark Dragon Lord Guard": "https://aion2index.com/img/g/Icon_Weapon_Guarder_U_005.png",
       "Dark Dragon Lord Necklace": "https://aion2index.com/img/g/Icon_ACC_NL_0035.png",
@@ -349,7 +350,7 @@
       return "";
     }
 
-    const SKILL_ICONS = {
+    let SKILL_ICONS = {
       "Aerial Snare": "https://aion2index.com/img/g/ICON_GL_SKILL_015.png",
       "Ambush Stance": "https://aion2index.com/img/g/ICON_AS_SKILL_Passive_007.png",
       "Assault Stance": "https://aion2index.com/img/g/ICON_AS_SKILL_Passive_006.png",
@@ -453,7 +454,7 @@
       const clean = skillName.replace(/^~~|~~$/g, "").trim();
       return SKILL_ICONS[`${clean}|${clsName}`] || SKILL_ICONS[clean] || "";
     }
-    const DB = {
+    let DB = {
       TheAres: {
         name: "TheAres", title: "Blacksmithing Is Life", cls: "Gladiator · Lv.45 · Asmodian",
         cp: "193,032", cpPvp: "193,613", ilvl: "2,998", ilvlPvp: "3,009", rank: "#331 Gladiator · #2,067 Zikel",
@@ -1245,7 +1246,26 @@
       render();
     });
 
+    async function loadLiveData() {
+      try {
+        const res = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) return;
+        const payload = await res.json();
+        if (payload.AVATARS) AVATARS = payload.AVATARS;
+        if (payload.ICONS) ICONS = payload.ICONS;
+        if (payload.SKILL_ICONS) SKILL_ICONS = payload.SKILL_ICONS;
+        if (payload.DB) DB = payload.DB;
+        if (payload.updatedAt) {
+          document.getElementById("syncTime").textContent = `Auto-Sync: ${payload.updatedAt}`;
+        }
+        render();
+      } catch (e) {
+        // Fallback to embedded snapshot when opened locally via file://
+      }
+    }
+
     render();
+    loadLiveData();
   </script>
 </body>
 </html>
