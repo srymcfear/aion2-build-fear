@@ -13,4 +13,3 @@ Trang web và báo cáo Excel tổng hợp chỉ số nâng cấp **Soul Binding
 ## Cấu trúc thư mục
 - `index.html`: Trang web chính (hỗ trợ PvE/PvP, bộ lọc ưu tiên, đối chiếu `YOUR LINES` vs `AIM FOR` kèm `Per Sync`, và chi tiết Arcana kèm icon skill).
 - `*_Upgrades_Summary.xlsx`: Báo cáo Excel chi tiết từng thành viên (PvE & PvP).
-- `demo-*.html`: 3 mẫu prototype ban đầu.
