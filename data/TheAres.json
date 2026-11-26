@@ -1,0 +1,857 @@
+{
+  "name": "TheAres",
+  "title": "Blacksmithing Is Life",
+  "cls": "Gladiator · Lv.45 · Asmodian",
+  "cp": "193,032",
+  "cpPvp": "193,613",
+  "ilvl": "2,998",
+  "ilvlPvp": "3,009",
+  "rank": "#331 Gladiator · #2,067 Zikel",
+  "url": "https://aion2index.com/c/as/zikel/TheAres/upgrades",
+  "gear": [
+    {
+      "name": "Splendent Ebony Dragon Lord Greatsword",
+      "slot": "Main hand (+15 ex+4)",
+      "score": "46 Stirring",
+      "lines": [
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Front Attack",
+          "Weak"
+        ],
+        [
+          "Status Effect Chance",
+          "Fine"
+        ],
+        [
+          "Critical Attack",
+          "Weak"
+        ],
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Ruinous Blow",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Dark Dragon Lord Guard",
+      "slot": "Off hand (+15 ex+3)",
+      "score": "55 Strong",
+      "lines": [
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ],
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Critical Hit",
+          "Weak"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Front Attack",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Helm",
+      "slot": "Helmet (+11)",
+      "score": "19 Dormant",
+      "lines": [
+        [
+          "Natural HP Regen",
+          "Weak"
+        ],
+        [
+          "Attack Preparation",
+          "Used"
+        ],
+        [
+          "Survival Willpower",
+          "Weak"
+        ],
+        [
+          "Blood Absorption",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Pauldrons",
+      "slot": "Shoulders (+11)",
+      "score": "63 Strong",
+      "lines": [
+        [
+          "Critical Damage Boost",
+          "Best"
+        ],
+        [
+          "Critical Hit",
+          "Fine"
+        ],
+        [
+          "Status Effect Resist",
+          "Weak"
+        ],
+        [
+          "Identify Weakness",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Breastplate",
+      "slot": "Torso (+11)",
+      "score": "19 Dormant",
+      "lines": [
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ],
+        [
+          "Weapon Damage Tolerance",
+          "Fine"
+        ],
+        [
+          "Evasion",
+          "Weak"
+        ],
+        [
+          "Blood Absorption",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Greaves",
+      "slot": "Pants (+11)",
+      "score": "63 Strong",
+      "lines": [
+        [
+          "Perfect Chance",
+          "Best"
+        ],
+        [
+          "Dexterity",
+          "Fine"
+        ],
+        [
+          "Evasion",
+          "Weak"
+        ],
+        [
+          "Attack Preparation",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Gloves",
+      "slot": "Gloves (+10)",
+      "score": "25 Dormant",
+      "lines": [
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Willpower",
+          "Weak"
+        ],
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Status Effect Resist",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Boots",
+      "slot": "Boots (+11)",
+      "score": "44 Stirring",
+      "lines": [
+        [
+          "Perfect Chance",
+          "Best"
+        ],
+        [
+          "Defense increase",
+          "Fine"
+        ],
+        [
+          "Back Defense",
+          "Weak"
+        ],
+        [
+          "Destructive Impulse",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Cloak",
+      "slot": "Cape (+12)",
+      "score": "25 Dormant",
+      "lines": [
+        [
+          "Willpower",
+          "Weak"
+        ],
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Critical Hit",
+          "Weak"
+        ],
+        [
+          "Double Chance",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Necklace",
+      "slot": "Necklace (+15 ex+2)",
+      "score": "94 Radiant",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Identify Weakness",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (+14)",
+      "slot": "Earring (+14)",
+      "score": "56 Strong",
+      "lines": [
+        [
+          "Accuracy",
+          "Good"
+        ],
+        [
+          "Defense",
+          "Weak"
+        ],
+        [
+          "Murderous Burst",
+          "Used"
+        ],
+        [
+          "Identify Weakness",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (+10)",
+      "slot": "Earring (+10)",
+      "score": "38 Stirring",
+      "lines": [
+        [
+          "Natural MP Regen",
+          "Weak"
+        ],
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ],
+        [
+          "Attack Preparation",
+          "Used"
+        ],
+        [
+          "Identify Weakness",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Ring (+15 ex+2)",
+      "slot": "Ring (+15 ex+2)",
+      "score": "63 Strong",
+      "lines": [
+        [
+          "HP",
+          "Weak"
+        ],
+        [
+          "Accuracy",
+          "Good"
+        ],
+        [
+          "Overhead Slam",
+          "Used"
+        ],
+        [
+          "Rending Blow",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Ring (+11)",
+      "slot": "Ring (+11)",
+      "score": "88 Radiant",
+      "lines": [
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Good"
+        ],
+        [
+          "Ruinous Blow",
+          "Used"
+        ],
+        [
+          "Overhead Slam",
+          "Used"
+        ]
+      ]
+    }
+  ],
+  "arcana": [
+    {
+      "name": "Chalice of Vigor (+5)",
+      "count": "2 of 4 best skills",
+      "status": "med",
+      "tag": "Keep",
+      "skills": [
+        "Overhead Slam",
+        "Rending Blow",
+        "Leaping Slam",
+        "~~Defiance~~"
+      ],
+      "best4": [
+        [
+          "Overhead Slam",
+          "62%",
+          true
+        ],
+        [
+          "Rending Blow",
+          "29%",
+          true
+        ],
+        [
+          "Ruinous Blow",
+          "26%",
+          false
+        ],
+        [
+          "Attack Preparation",
+          "22%",
+          false
+        ]
+      ],
+      "rollNote": "A new Unique Chalice · 7% chance it rolls better skills than yours"
+    },
+    {
+      "name": "Parchment of Vigor (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Overhead Slam",
+        "Ruinous Blow",
+        "Leaping Slam",
+        "Aerial Snare"
+      ],
+      "best4": [
+        [
+          "Overhead Slam",
+          "91%",
+          true
+        ],
+        [
+          "Ruinous Blow",
+          "80%",
+          true
+        ],
+        [
+          "Keen Strike",
+          "64%",
+          false
+        ],
+        [
+          "Leaping Slam",
+          "62%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Compass of Magic (+5)",
+      "count": "2 of 3 best skills",
+      "status": "med",
+      "tag": "Keep",
+      "skills": [
+        "Rending Blow",
+        "Rush Strike",
+        "~~Sword Aura Rampage~~",
+        "~~Defiance~~"
+      ],
+      "best4": [
+        [
+          "Rending Blow",
+          "87%",
+          true
+        ],
+        [
+          "Rush Strike",
+          "62%",
+          true
+        ],
+        [
+          "Mocking Blade",
+          "51%",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "Bell of Vigor (+4)",
+      "count": "3 of 4 best skills",
+      "status": "high",
+      "tag": "Enchant to +5",
+      "skills": [
+        "Attack Preparation",
+        "Blood Absorption",
+        "Survival Stance",
+        "Survival Willpower"
+      ],
+      "best4": [
+        [
+          "Attack Preparation",
+          "97%",
+          true
+        ],
+        [
+          "Destructive Impulse",
+          "79%",
+          false
+        ],
+        [
+          "Blood Absorption",
+          "78%",
+          true
+        ],
+        [
+          "Survival Stance",
+          "74%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Mirror of Magic (+4)",
+      "count": "4 of 4 best skills",
+      "status": "high",
+      "tag": "Enchant to +5",
+      "skills": [
+        "Impact Hit",
+        "Experienced Counterstrike",
+        "Identify Weakness",
+        "Murderous Burst"
+      ],
+      "best4": [
+        [
+          "Impact Hit",
+          "90%",
+          true
+        ],
+        [
+          "Experienced Counterstrike",
+          "87%",
+          true
+        ],
+        [
+          "Identify Weakness",
+          "85%",
+          true
+        ],
+        [
+          "Murderous Burst",
+          "81%",
+          true
+        ]
+      ]
+    }
+  ],
+  "pve": {
+    "score": 50,
+    "tier": "Stirring",
+    "pot": 67,
+    "shots": [
+      {
+        "src": "assets/screenshots/theares/step_4_shot_1.png",
+        "cap": "TheAres PvE — Tổng quan & 14 món trang bị"
+      },
+      {
+        "src": "assets/screenshots/theares/step_4_shot_2.png",
+        "cap": "TheAres PvE — Upgrade Priority #1 & #2"
+      },
+      {
+        "src": "assets/screenshots/theares/step_4_shot_3.png",
+        "cap": "TheAres PvE — Upgrade Priority #3-#5 & Other Pieces"
+      },
+      {
+        "src": "assets/screenshots/theares/step_4_shot_4.png",
+        "cap": "TheAres PvE — Other Pieces & Arcana"
+      },
+      {
+        "src": "assets/screenshots/theares/step_4_shot_5.png",
+        "cap": "TheAres PvE — Phân tích Best 4 Chalice"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Splendent Ebony Dragon Lord Greatsword",
+        "slot": "Main hand (+15 ex+4)",
+        "score": "46 → 96 (+50)",
+        "syncs": "~11 Syncs",
+        "keep": "Combat Speed (100%), Status Effect Chance (10%), Multi-hit Chance (95%)",
+        "remove": "Front Attack, Critical Attack, Ruinous Blow",
+        "target": "Might (100% | 6.2%), Weapon Damage Boost (100% | 4.1%), Damage Boost (99% | 2.1%), Precision (94% | 7.2%), Attack (84% | 7.2%)",
+        "anySync": "Any of these · ~4 Syncs · 27%"
+      },
+      {
+        "prio": "high",
+        "name": "Dark Dragon Lord Guard",
+        "slot": "Off hand (+15 ex+3)",
+        "score": "55 → 95 (+40)",
+        "syncs": "~9 Syncs",
+        "keep": "Weapon Damage Boost (100%), Attack (88%), Combat Speed (100%)",
+        "remove": "Critical Hit, Front Attack",
+        "target": "Might (100% | 6.2%), Damage Boost (100% | 2.1%), Multi-hit Chance (99% | 6.2%), Precision (94% | 7.2%)",
+        "anySync": "Any of these · ~5 Syncs · 22%"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+14)",
+        "score": "56 → 81 (+25)",
+        "syncs": "~7 Syncs",
+        "keep": "Accuracy (57%), Murderous Burst (79%), Identify Weakness (58%)",
+        "remove": "Defense",
+        "target": "Might (100% | 1.7%), Attack (100% | 5.1%), Move Speed (100% | 1.7%), Precision (94% | 1.7%), Attack Preparation (79% | 2.5%), Experienced Counterstrike (79% | 2.5%)",
+        "anySync": "Any of these · ~7 Syncs · 15%"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+11)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~22 Syncs",
+        "keep": "Weapon Damage Tolerance (7%)",
+        "remove": "Critical Hit Resist, Evasion, Blood Absorption",
+        "target": "Damage Boost (100% | 2.6%), Perfect Chance (95% | 1%), Attack (94% | 3.4%), Experienced Counterstrike (78% | 2.2%), Murderous Burst (74% | 2.2%), Impact Hit (69% | 2.2%)",
+        "anySync": "Any of these · ~7 Syncs · 14%"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+10)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~15 Syncs",
+        "keep": "Attack Preparation (79%), Identify Weakness (58%)",
+        "remove": "Natural MP Regen, Critical Hit Resist",
+        "target": "Might (100% | 1.8%), Attack (100% | 5.3%), Move Speed (100% | 1.8%), Precision (94% | 1.8%), Experienced Counterstrike (79% | 2.5%)",
+        "anySync": "Any of these · ~8 Syncs · 13%"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+11)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~23 Syncs",
+        "keep": "Attack Preparation (57%)",
+        "remove": "Natural HP Regen, Survival Willpower, Blood Absorption",
+        "target": "Double Chance (99% | 1%), Attack increase (99% | 1%), Attack (92% | 3.2%), Experienced Counterstrike (78% | 2.9%), Murderous Burst (75% | 2.9%), Impact Hit (65% | 2.9%)",
+        "anySync": "Any of these · ~7 Syncs · 14%"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+11)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~16 Syncs",
+        "keep": "Perfect Chance (96%), Defense increase (10%)",
+        "remove": "Back Defense, Destructive Impulse",
+        "target": "Move Speed (100% | 2.5%), Attack (92% | 3.3%), Experienced Counterstrike (78% | 2.2%), Murderous Burst (72% | 2.2%), Impact Hit (65% | 2.2%)",
+        "anySync": "Any of these · ~8 Syncs · 12%"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+11)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~9 Syncs",
+        "keep": "Perfect Chance (94%), Dexterity (7%), Attack Preparation (36%)",
+        "remove": "Evasion",
+        "target": "Attack increase (99% | 1%), Damage Tolerance (87% | 2.5%), Attack (85% | 3.4%), Experienced Counterstrike (78% | 2.2%), Murderous Burst (69% | 2.2%)",
+        "anySync": "Any of these · ~9 Syncs · 11%"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+11)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~9 Syncs",
+        "keep": "Critical Damage Boost (100%), Critical Hit (7%), Identify Weakness (16%)",
+        "remove": "Status Effect Resist",
+        "target": "Double Chance (100% | 1%), Attack (95% | 3.5%), Experienced Counterstrike (79% | 2.2%), Murderous Burst (76% | 2.2%), Impact Hit (72% | 2.2%)",
+        "anySync": "Any of these · ~9 Syncs · 11%"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Ring",
+        "slot": "Ring (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~10 Syncs",
+        "keep": "Accuracy (52%), Overhead Slam (79%), Rending Blow (78%)",
+        "remove": "HP",
+        "target": "Might (100% | 1.7%), Attack (99% | 5.1%), Precision (94% | 1.7%), Ruinous Blow (79% | 2%)",
+        "anySync": "Any of these · ~10 Syncs · 11%"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+12)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~28 Syncs",
+        "keep": "Double Chance (100%)",
+        "remove": "Willpower, Block, Critical Hit",
+        "target": "Attack increase (99% | 1.1%), Attack (70% | 3.6%), Experienced Counterstrike (77% | 2%), Murderous Burst (68% | 2%), Impact Hit (46% | 2%)",
+        "anySync": "Any of these · ~9 Syncs · 11%"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Gloves",
+        "slot": "Gloves (+10)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~28 Syncs",
+        "keep": "Combat Speed (100%)",
+        "remove": "Willpower, Block, Status Effect Resist",
+        "target": "Perfect Chance (96% | 1.1%), Attack (92% | 3.6%), Experienced Counterstrike (79% | 2%), Murderous Burst (73% | 2%), Attack Preparation (60% | 2%)",
+        "anySync": "Any of these · ~9 Syncs · 11%"
+      },
+      {
+        "prio": "rad",
+        "name": "Enraged Kromede Necklace",
+        "slot": "Necklace (+15 ex+2)",
+        "score": "94 Radiant",
+        "syncs": "0",
+        "keep": "Attack (Best), Combat Speed (Best), Might (Best), Identify Weakness (Used)",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      },
+      {
+        "prio": "rad",
+        "name": "Enraged Kromede Ring",
+        "slot": "Ring (+11)",
+        "score": "88 Radiant",
+        "syncs": "0",
+        "keep": "Might (Best), Accuracy (Good), Ruinous Blow (Used), Overhead Slam (Used)",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      }
+    ]
+  },
+  "pvp": {
+    "score": 46,
+    "tier": "Stirring",
+    "pot": 65,
+    "shots": [
+      {
+        "src": "assets/screenshots/theares/pvp_main.png",
+        "cap": "TheAres PvP — Tổng quan Soul Resonance & Trang bị"
+      },
+      {
+        "src": "assets/screenshots/theares/pvp_upgrades.png",
+        "cap": "TheAres PvP — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/theares/pvp_arcana.png",
+        "cap": "TheAres PvP — Arcana (Same in PvE and PvP)"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Dark Dragon Lord Guard",
+        "slot": "Off hand (+15 ex+3)",
+        "score": "55 → 95 (+40)",
+        "syncs": "~8 Syncs",
+        "keep": "Weapon Damage Boost (6.3%), Attack (37), Combat Speed (7.8%)",
+        "remove": "Critical Hit, Front Attack",
+        "target": "Might (100%), Precision (99%), Damage Boost (92%), Status Effect Chance (85%)"
+      },
+      {
+        "prio": "high",
+        "name": "Splendent Ebony Dragon Lord Greatsword",
+        "slot": "Main hand (+15 ex+4)",
+        "score": "46 → 96 (+50)",
+        "syncs": "~11 Syncs",
+        "keep": "Combat Speed (13%), Status Effect Chance (25.1%), Multi-hit Chance (9.6%)",
+        "remove": "Front Attack, Critical Attack, Ruinous Blow",
+        "target": "Might (100%), Weapon Damage Boost (100%), Precision (96%), Damage Boost (63%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+10)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~20 Syncs",
+        "keep": "Attack Preparation",
+        "remove": "Natural MP Regen, Critical Hit Resist, Identify Weakness",
+        "target": "Might (100%), Move Speed (100%), Precision (94%), Intelligence (88%), Accuracy (88%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+11)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~14 Syncs",
+        "keep": "Perfect Chance (5%), Dexterity (17)",
+        "remove": "Evasion, Attack Preparation",
+        "target": "Damage Tolerance (98%), Attack increase (85%), Attack (84%), Status Effect Resist (83%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+11)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~16 Syncs",
+        "keep": "Perfect Chance (3.7%), Defense increase (2.4%)",
+        "remove": "Back Defense, Destructive Impulse",
+        "target": "Move Speed (100%), Status Effect Resist (87%), Willpower (61%), Survival Stance (48%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+11)",
+        "score": "0 → 100 (+100)",
+        "syncs": "~29 Syncs",
+        "keep": "Không có dòng giữ",
+        "remove": "Natural HP Regen, Blood Absorption, Attack Preparation, Survival Willpower",
+        "target": "Attack (91%), Attack increase (87%), Status Effect Resist (85%), Incoming Heal (64%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+11)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~23 Syncs",
+        "keep": "Weapon Damage Tolerance (9.1%)",
+        "remove": "Critical Hit Resist, Evasion, Blood Absorption",
+        "target": "Damage Boost (100%), Perfect Chance (95%), Status Effect Resist (84%), Willpower (70%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+12)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~18 Syncs",
+        "keep": "Willpower, Double Chance",
+        "remove": "Block, Critical Hit",
+        "target": "Critical Damage Tolerance (87%), Weapon Damage Tolerance (85%), Status Effect Resist (83%)"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Necklace",
+        "slot": "Necklace (+15 ex+2)",
+        "score": "69 → 94 (+25)",
+        "syncs": "~9 Syncs",
+        "keep": "Attack, Combat Speed, Might",
+        "remove": "Identify Weakness",
+        "target": "Precision (94%), Intelligence (86%), Accuracy (84%), Impact Hit (65%)"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+15 ex+2)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~32 Syncs",
+        "keep": "Accuracy",
+        "remove": "Defense, Identify Weakness, Murderous Burst",
+        "target": "Might (100%), Move Speed (100%), Precision (94%), Intelligence (88%)"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Ring",
+        "slot": "Ring (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~11 Syncs",
+        "keep": "Accuracy, Overhead Slam, Rending Blow",
+        "remove": "HP",
+        "target": "Might (100%), Precision (94%), Ruinous Blow (61%), Intelligence (56%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+11)",
+        "score": "69 → 94 (+25)",
+        "syncs": "~13 Syncs",
+        "keep": "Critical Damage Boost, Critical Hit, Status Effect Resist",
+        "remove": "Identify Weakness",
+        "target": "Double Chance (100%), Endurance Penetration (61%), Willpower (52%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Gloves",
+        "slot": "Gloves (+10)",
+        "score": "75 → 100 (+25)",
+        "syncs": "~20 Syncs",
+        "keep": "Combat Speed, Willpower, Status Effect Resist",
+        "remove": "Block",
+        "target": "Endurance Penetration (60%), Survival Stance (42%), Impact Hit (38%)"
+      },
+      {
+        "prio": "rad",
+        "name": "Enraged Kromede Ring",
+        "slot": "Ring (+11)",
+        "score": "94 Radiant",
+        "syncs": "0",
+        "keep": "Might, Accuracy, Ruinous Blow, Overhead Slam",
+        "remove": "Không cần xóa",
+        "target": "PvP đạt sẵn 94 Radiant"
+      }
+    ]
+  }
+}

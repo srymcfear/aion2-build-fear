@@ -1,0 +1,888 @@
+{
+  "name": "MusangKing",
+  "title": "Empty Closet",
+  "cls": "Cleric · Lv.45 · Asmodian",
+  "cp": "227,390",
+  "cpPvp": "227,390",
+  "ilvl": "3,218",
+  "ilvlPvp": "3,218",
+  "rank": "#83 Cleric · #755 Zikel",
+  "url": "https://aion2index.com/c/as/zikel/MusangKing/upgrades",
+  "gear": [
+    {
+      "name": "Splendent Ebony Dragon Lord Mace",
+      "slot": "Main hand (+15 ex+5)",
+      "score": "96 Radiant",
+      "lines": [
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ],
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Damage Boost",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Attack",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Ebony Dragon Lord Guard",
+      "slot": "Off hand (+15 ex+4)",
+      "score": "83 Radiant",
+      "lines": [
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Weak"
+        ],
+        [
+          "Damage Boost",
+          "Best"
+        ],
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Helm",
+      "slot": "Helmet (+15 ex+1)",
+      "score": "44 Stirring",
+      "lines": [
+        [
+          "Front Defense",
+          "Weak"
+        ],
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Double Chance",
+          "Best"
+        ],
+        [
+          "Empyrean Lord's Grace",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Pauldrons",
+      "slot": "Shoulders (+15 ex+2)",
+      "score": "50 Stirring",
+      "lines": [
+        [
+          "Critical Damage Boost",
+          "Best"
+        ],
+        [
+          "Double Chance",
+          "Best"
+        ],
+        [
+          "Prayer of Concentration",
+          "Weak"
+        ],
+        [
+          "Empyrean Lords' Benediction",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Breastplate",
+      "slot": "Torso (+15 ex+1)",
+      "score": "50 Stirring (PvP: 75 Radiant)",
+      "lines": [
+        [
+          "HP",
+          "Weak"
+        ],
+        [
+          "Damage Boost",
+          "Best"
+        ],
+        [
+          "Status Effect Resist",
+          "Weak"
+        ],
+        [
+          "Attack",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Greaves",
+      "slot": "Pants (+15 ex+1)",
+      "score": "44 Stirring (PvP: 81 Radiant)",
+      "lines": [
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Accuracy",
+          "Fine"
+        ],
+        [
+          "Dexterity",
+          "Weak"
+        ],
+        [
+          "Perfect Chance",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Ebony Dragon Lord Gloves",
+      "slot": "Gloves (+15 ex+2)",
+      "score": "46 Stirring",
+      "lines": [
+        [
+          "Defense increase",
+          "Fine"
+        ],
+        [
+          "Status Effect Resist",
+          "Weak"
+        ],
+        [
+          "Endurance Penetration",
+          "Weak"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Warm Benediction",
+          "Weak"
+        ],
+        [
+          "Healing Enhancement",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Boots",
+      "slot": "Boots (+15 ex+1)",
+      "score": "25 Dormant",
+      "lines": [
+        [
+          "Defense",
+          "Weak"
+        ],
+        [
+          "Front Defense",
+          "Weak"
+        ],
+        [
+          "Move Speed",
+          "Best"
+        ],
+        [
+          "Endurance Penetration",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Cloak",
+      "slot": "Cape (+15 ex+1)",
+      "score": "25 Dormant",
+      "lines": [
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ],
+        [
+          "Constitution",
+          "Weak"
+        ],
+        [
+          "Double Chance",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Ebony Dragon Lord Necklace",
+      "slot": "Necklace (+15 ex+1)",
+      "score": "55 Strong",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Best"
+        ],
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Evasion",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (+12)",
+      "slot": "Earring (+12)",
+      "score": "44 Stirring (PvP: 81 Radiant)",
+      "lines": [
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ],
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Move Speed",
+          "Best"
+        ],
+        [
+          "Defense",
+          "Fine"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (+15)",
+      "slot": "Earring (+15)",
+      "score": "63 Strong",
+      "lines": [
+        [
+          "Move Speed",
+          "Best"
+        ],
+        [
+          "Earth's Grace",
+          "Used"
+        ],
+        [
+          "Radiant Benediction",
+          "Used"
+        ],
+        [
+          "Survival Willpower",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Ring (1)",
+      "slot": "Ring (+15 ex+1)",
+      "score": "56 Strong",
+      "lines": [
+        [
+          "Earth's Retribution",
+          "Used"
+        ],
+        [
+          "Bolt",
+          "Used"
+        ],
+        [
+          "Debilitating Mark",
+          "Weak"
+        ],
+        [
+          "Light of Regeneration",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Ring (2)",
+      "slot": "Ring (+15 ex+1)",
+      "score": "88 Radiant",
+      "lines": [
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Condemnation",
+          "Used"
+        ],
+        [
+          "Judgment Thunder",
+          "Used"
+        ],
+        [
+          "Light of Regeneration",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Abyssal Bracelet (1)",
+      "slot": "Bracelet (+10)",
+      "score": "100 Radiant",
+      "lines": [
+        [
+          "Wisdom [Lumiel]",
+          "Best"
+        ],
+        [
+          "Justice [Nezekan]",
+          "Good"
+        ],
+        [
+          "Destruction [Zikel]",
+          "Best"
+        ],
+        [
+          "Death [Triniel]",
+          "Good"
+        ],
+        [
+          "Illusion [Kaisinel]",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "name": "Abyssal Bracelet (2)",
+      "slot": "Bracelet (+10)",
+      "score": "94 Radiant (PvP: 75 Radiant)",
+      "lines": [
+        [
+          "Freedom [Vaizel]",
+          "Fine"
+        ],
+        [
+          "Destruction [Zikel]",
+          "Best"
+        ],
+        [
+          "Illusion [Kaisinel]",
+          "Best"
+        ],
+        [
+          "Justice [Nezekan]",
+          "Good"
+        ]
+      ]
+    }
+  ],
+  "arcana": [
+    {
+      "name": "Chalice of Vigor (+5)",
+      "count": "1 of 4 best skills",
+      "status": "med",
+      "tag": "Keep",
+      "skills": [
+        "Condemnation",
+        "Judgment Thunder",
+        "Bolt",
+        "Healing Enhancement"
+      ],
+      "best4": [
+        [
+          "Radiant Recovery",
+          "49%",
+          false
+        ],
+        [
+          "Healing Light",
+          "35%",
+          false
+        ],
+        [
+          "Condemnation",
+          "31%",
+          true
+        ],
+        [
+          "Light of Regeneration",
+          "28%",
+          false
+        ]
+      ],
+      "rollNote": "A new Unique Chalice · 15% chance it rolls better skills than yours"
+    },
+    {
+      "name": "Parchment of Magic (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Radiant Recovery",
+        "Condemnation",
+        "Earth's Retribution",
+        "Bolt"
+      ],
+      "best4": [
+        [
+          "Radiant Recovery",
+          "85%",
+          true
+        ],
+        [
+          "Condemnation",
+          "77%",
+          true
+        ],
+        [
+          "Earth's Retribution",
+          "68%",
+          true
+        ],
+        [
+          "Chain of Torment",
+          "59%",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "Compass of Vigor (+5)",
+      "count": "4 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Healing Light",
+        "Judgment Thunder",
+        "Light of Regeneration",
+        "Divine Aura"
+      ],
+      "best4": [
+        [
+          "Healing Light",
+          "90%",
+          true
+        ],
+        [
+          "Judgment Thunder",
+          "83%",
+          true
+        ],
+        [
+          "Light of Regeneration",
+          "74%",
+          true
+        ],
+        [
+          "Divine Aura",
+          "61%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Bell of Magic (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Empyrean Lord's Grace",
+        "Immortal Veil",
+        "Prayer of Concentration",
+        "Survival Willpower"
+      ],
+      "best4": [
+        [
+          "Empyrean Lord's Grace",
+          "89%",
+          true
+        ],
+        [
+          "Immortal Veil",
+          "87%",
+          true
+        ],
+        [
+          "Warm Benediction",
+          "84%",
+          false
+        ],
+        [
+          "Prayer of Concentration",
+          "72%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Mirror of Magic (+5)",
+      "count": "4 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Earth's Grace",
+        "Healing Enhancement",
+        "Radiant Benediction",
+        "Empyrean Lords' Benediction"
+      ],
+      "best4": [
+        [
+          "Earth's Grace",
+          "92%",
+          true
+        ],
+        [
+          "Healing Enhancement",
+          "91%",
+          true
+        ],
+        [
+          "Radiant Benediction",
+          "76%",
+          true
+        ],
+        [
+          "Empyrean Lords' Benediction",
+          "73%",
+          true
+        ]
+      ]
+    }
+  ],
+  "pve": {
+    "score": 60,
+    "tier": "Strong",
+    "pot": 73,
+    "shots": [
+      {
+        "src": "assets/screenshots/musangking/step_4_shot_1_pve_main.png",
+        "cap": "MusangKing PvE — Tổng quan & Trang bị"
+      },
+      {
+        "src": "assets/screenshots/musangking/step_4_shot_2_pve_upgrades.png",
+        "cap": "MusangKing PvE — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/musangking/step_8_shot_1_pve_arcana_clean.png",
+        "cap": "MusangKing PvE — Arcana & Best 4 Chalice"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+12)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~9 Syncs",
+        "keep": "Move Speed (5.3%), Defense (278)",
+        "remove": "Critical Hit Resist, Block",
+        "target": "Might (100%), Attack (100%), Precision (98%), Critical Hit (93%), Accuracy (90%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+15)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~6 Syncs",
+        "keep": "Move Speed, Earth's Grace, Radiant Benediction",
+        "remove": "Survival Willpower",
+        "target": "Might (100%), Attack (100%), Precision (98%), Critical Hit (93%), Accuracy (90%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Ring",
+        "slot": "Ring (+15 ex+1)",
+        "score": "56 → 81 (+25)",
+        "syncs": "~8 Syncs",
+        "keep": "Earth's Retribution, Bolt, Light of Regeneration",
+        "remove": "Debilitating Mark",
+        "target": "Might (100%), Precision (98%), Attack (83%), Condemnation (73%), Radiant Recovery (71%)"
+      },
+      {
+        "prio": "high",
+        "name": "Splendent Ebony Dragon Lord Gloves",
+        "slot": "Gloves (+15 ex+2)",
+        "score": "46 → 96 (+50)",
+        "syncs": "~17 Syncs",
+        "keep": "Defense increase, Combat Speed, Healing Enhancement",
+        "remove": "Status Effect Resist, Endurance Penetration, Warm Benediction",
+        "target": "Attack (95%), Perfect Chance (91%), Earth's Grace (73%), Empyrean Lord's Grace (73%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+15 ex+2)",
+        "score": "50 → 100 (+50)",
+        "syncs": "~17 Syncs",
+        "keep": "Critical Damage Boost (100%), Double Chance (99%)",
+        "remove": "Empyrean Lords' Benediction, Prayer of Concentration",
+        "target": "Attack (96%), Empyrean Lord's Grace (74%), Earth's Grace (73%), Critical Hit (53%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+15 ex+1)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~18 Syncs",
+        "keep": "Accuracy, Perfect Chance",
+        "remove": "Block, Dexterity",
+        "target": "Chỉ số Meta Pants"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+15 ex+1)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~26 Syncs",
+        "keep": "Double Chance",
+        "remove": "Block, Critical Hit Resist, Constitution",
+        "target": "Chỉ số Meta Cape"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Ebony Dragon Lord Necklace",
+        "slot": "Necklace (+15 ex+1)",
+        "score": "55 → 95 (+40)",
+        "syncs": "~16 Syncs",
+        "keep": "Attack, Combat Speed, Accuracy",
+        "remove": "Evasion, Block",
+        "target": "Chỉ số Meta Necklace"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+15 ex+1)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~31 Syncs",
+        "keep": "Move Speed",
+        "remove": "Defense, Front Defense, Endurance Penetration",
+        "target": "Chỉ số Meta Boots"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+15 ex+1)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~22 Syncs",
+        "keep": "Double Chance, Empyrean Lord's Grace",
+        "remove": "Front Defense, Block",
+        "target": "Chỉ số Meta Helmet"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+15 ex+1)",
+        "score": "50 → 100 (+50)",
+        "syncs": "~21 Syncs",
+        "keep": "Damage Boost, Attack",
+        "remove": "HP, Status Effect Resist",
+        "target": "Chỉ số Meta Torso"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Ebony Dragon Lord Guard",
+        "slot": "Off hand (+15 ex+4)",
+        "score": "83 → 100 (+17)",
+        "syncs": "~7 Syncs",
+        "keep": "Combat Speed, Multi-hit Chance, Might, Damage Boost, Weapon Damage Boost",
+        "remove": "Accuracy",
+        "target": "Chỉ số Meta Off hand"
+      },
+      {
+        "prio": "rad",
+        "name": "Mace / Ring (2) / Abyssal Bracelets",
+        "slot": "Main / Ring / Brac",
+        "score": "88–100 Radiant",
+        "syncs": "0",
+        "keep": "All Best/Good",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      }
+    ]
+  },
+  "pvp": {
+    "score": 66,
+    "tier": "Strong",
+    "pot": 82,
+    "shots": [
+      {
+        "src": "assets/screenshots/musangking/step_12_shot_1_pvp_main.png",
+        "cap": "MusangKing PvP — Tổng quan Soul Resonance"
+      },
+      {
+        "src": "assets/screenshots/musangking/step_12_shot_2_pvp_upgrades.png",
+        "cap": "MusangKing PvP — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/musangking/step_12_shot_3_pvp_arcana.png",
+        "cap": "MusangKing PvP — Arcana (Same in PvE and PvP)"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+15 ex+1)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~11 Syncs",
+        "keep": "Block (27%), Double Chance (31%)",
+        "remove": "Critical Hit Resist, Constitution",
+        "target": "Critical Damage Tolerance (86%), Attack (84%), Weapon Damage Tolerance (81%), Status Effect Resist (78%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+15 ex+1)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~12 Syncs",
+        "keep": "Block (35%), Double Chance (32%)",
+        "remove": "Front Defense, Empyrean Lord's Grace",
+        "target": "Attack (93%), Incoming Heal (86%), Status Effect Resist (80%), Dexterity (63%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+15 ex+1)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~21 Syncs",
+        "keep": "Move Speed (99%)",
+        "remove": "Defense, Front Defense, Endurance Penetration",
+        "target": "Attack (93%), Perfect Chance (91%), Status Effect Resist (78%), Dexterity (62%)"
+      },
+      {
+        "prio": "high",
+        "name": "Splendent Ebony Dragon Lord Necklace",
+        "slot": "Necklace (+15 ex+1)",
+        "score": "65 → 85 (+20)",
+        "syncs": "~6 Syncs",
+        "keep": "Attack, Combat Speed, Accuracy, Block",
+        "remove": "Evasion",
+        "target": "Might (100%), Precision (98%), Immortal Veil (58%), Survival Willpower (57%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+15 ex+2)",
+        "score": "50 → 100 (+50)",
+        "syncs": "~15 Syncs",
+        "keep": "Critical Damage Boost (79%), Double Chance (99%)",
+        "remove": "Prayer of Concentration, Empyrean Lords' Benediction",
+        "target": "Attack (95%), Status Effect Resist (79%), Critical Hit (62%), Dexterity (59%)"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Earrings",
+        "slot": "Earring (+15)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~8 Syncs",
+        "keep": "Move Speed, Earth's Grace, Survival Willpower",
+        "remove": "Radiant Benediction",
+        "target": "Chỉ số PvP Earring"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Ebony Dragon Lord Gloves",
+        "slot": "Gloves (+15 ex+2)",
+        "score": "46 → 96 (+50)",
+        "syncs": "~18 Syncs",
+        "keep": "Defense increase, Status Effect Resist, Combat Speed",
+        "remove": "Endurance Penetration, Warm Benediction, Healing Enhancement",
+        "target": "Chỉ số PvP Gloves"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Ring",
+        "slot": "Ring (+15 ex+1)",
+        "score": "56 → 81 (+25)",
+        "syncs": "~10 Syncs",
+        "keep": "Earth's Retribution, Bolt, Light of Regeneration",
+        "remove": "Debilitating Mark",
+        "target": "Chỉ số PvP Ring"
+      },
+      {
+        "prio": "med",
+        "name": "Abyssal Bracelet (2)",
+        "slot": "Bracelet (+10)",
+        "score": "75 → 100 (+25)",
+        "syncs": "~2 Syncs",
+        "keep": "Destruction [Zikel], Illusion [Kaisinel], Justice [Nezekan]",
+        "remove": "Freedom [Vaizel]",
+        "target": "Chỉ số PvP Bracelet"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Ebony Dragon Lord Guard",
+        "slot": "Off hand (+15 ex+4)",
+        "score": "83 → 100 (+17)",
+        "syncs": "~5 Syncs",
+        "keep": "Combat Speed, Multi-hit Chance, Might, Damage Boost, Weapon Damage Boost",
+        "remove": "Accuracy",
+        "target": "Chỉ số PvP Off hand"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+15 ex+1)",
+        "score": "75 → 100 (+25)",
+        "syncs": "~11 Syncs",
+        "keep": "Damage Boost, Status Effect Resist, Attack",
+        "remove": "HP",
+        "target": "Chỉ số PvP Torso"
+      },
+      {
+        "prio": "rad",
+        "name": "Greaves & Earrings (+12)",
+        "slot": "Pants / Earring",
+        "score": "81 Radiant",
+        "syncs": "0",
+        "keep": "PvP Meta Lines",
+        "remove": "Không cần xóa",
+        "target": "PvP đạt sẵn 81 Radiant"
+      },
+      {
+        "prio": "rad",
+        "name": "Mace / Ring (2) / Bracelet (1)",
+        "slot": "Main / Ring / Brac",
+        "score": "88–100 Radiant",
+        "syncs": "0",
+        "keep": "All Best/Good",
+        "remove": "Không cần xóa",
+        "target": "Đã chuẩn Radiant"
+      }
+    ]
+  }
+}

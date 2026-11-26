@@ -1,0 +1,826 @@
+{
+  "name": "BER",
+  "title": "Assassin · Zikel",
+  "cls": "Assassin · Lv.45 · Asmodian",
+  "cp": "213,095",
+  "cpPvp": "213,095",
+  "ilvl": "3,149",
+  "ilvlPvp": "3,149",
+  "rank": "#97 Assassin · #1,307 Zikel",
+  "url": "https://aion2index.com/c/as/zikel/BER/upgrades",
+  "gear": [
+    {
+      "name": "Splendent Dark Dragon Lord Dagger",
+      "slot": "Main hand (+15 ex+4)",
+      "score": "79 Radiant",
+      "lines": [
+        [
+          "Status Effect Chance",
+          "Fine"
+        ],
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ],
+        [
+          "Damage Boost",
+          "Best"
+        ],
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Critical Attack",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Guard",
+      "slot": "Off hand (+15 ex+2)",
+      "score": "80 Radiant (PvP: 75)",
+      "lines": [
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ],
+        [
+          "Heart Gore",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Helm",
+      "slot": "Helmet (+13)",
+      "score": "44 Stirring (PvP: 19)",
+      "lines": [
+        [
+          "Critical Hit",
+          "Weak"
+        ],
+        [
+          "Accuracy",
+          "Weak"
+        ],
+        [
+          "Exploit Weakness",
+          "Used"
+        ],
+        [
+          "Rear Smite",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Pauldrons",
+      "slot": "Shoulders (+15 ex+2)",
+      "score": "44 Stirring (PvP: 69)",
+      "lines": [
+        [
+          "Defense",
+          "Weak"
+        ],
+        [
+          "Status Effect Resist",
+          "Weak"
+        ],
+        [
+          "Critical Damage Boost",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Fine"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Breastplate",
+      "slot": "Torso (+15 ex+2)",
+      "score": "81 Radiant (PvP: 44)",
+      "lines": [
+        [
+          "Damage Boost",
+          "Best"
+        ],
+        [
+          "Critical Hit",
+          "Fine"
+        ],
+        [
+          "Impact Hit",
+          "Used"
+        ],
+        [
+          "Determination",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Greaves",
+      "slot": "Pants (+13)",
+      "score": "19 Dormant",
+      "lines": [
+        [
+          "Block",
+          "Weak"
+        ],
+        [
+          "Accuracy",
+          "Weak"
+        ],
+        [
+          "Evasion",
+          "Weak"
+        ],
+        [
+          "Rear Smite",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Gloves",
+      "slot": "Gloves (+15 ex+2)",
+      "score": "75 Radiant (PvP: 70)",
+      "lines": [
+        [
+          "Defense increase",
+          "Fine"
+        ],
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Weak"
+        ],
+        [
+          "Rear Smite",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Boots",
+      "slot": "Boots (+12)",
+      "score": "69 Strong (PvP: 44)",
+      "lines": [
+        [
+          "Accuracy",
+          "Weak"
+        ],
+        [
+          "Perfect Chance",
+          "Best"
+        ],
+        [
+          "Rear Smite",
+          "Used"
+        ],
+        [
+          "Exploit Weakness",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Cloak",
+      "slot": "Cape (+15 ex+1)",
+      "score": "25 Dormant (PvP: 69)",
+      "lines": [
+        [
+          "Weapon Damage Tolerance",
+          "Weak"
+        ],
+        [
+          "HP",
+          "Weak"
+        ],
+        [
+          "Attack",
+          "Good"
+        ],
+        [
+          "Status Effect Resist",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Dark Dragon Lord Necklace",
+      "slot": "Necklace (+15 ex+2)",
+      "score": "95 Radiant (PvP: 85)",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Rear Smite",
+          "Used"
+        ],
+        [
+          "Impact Hit",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (1)",
+      "slot": "Earring (+15 ex+2)",
+      "score": "63 Strong (PvP: 44)",
+      "lines": [
+        [
+          "Precision",
+          "Best"
+        ],
+        [
+          "Ambush Stance",
+          "Used"
+        ],
+        [
+          "Revitalization Contract",
+          "Weak"
+        ],
+        [
+          "Exploit Weakness",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (2)",
+      "slot": "Earring (+15 ex+2)",
+      "score": "63 Strong",
+      "lines": [
+        [
+          "Move Speed",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Fine"
+        ],
+        [
+          "Critical Hit",
+          "Good"
+        ],
+        [
+          "Defense Break",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Ring (1)",
+      "slot": "Ring (+15 ex+2)",
+      "score": "88 Radiant (PvP: 71)",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Fine"
+        ],
+        [
+          "Quick Slice",
+          "Used"
+        ],
+        [
+          "Savage Roar",
+          "Used"
+        ],
+        [
+          "Storm Rampage",
+          "Used"
+        ],
+        [
+          "Insignia Explosion",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Ring (2)",
+      "slot": "Ring (+15 ex+2)",
+      "score": "92 Radiant (PvP: 88)",
+      "lines": [
+        [
+          "Critical Hit",
+          "Fine"
+        ],
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Quick Slice",
+          "Used"
+        ],
+        [
+          "Insignia Explosion",
+          "Used"
+        ],
+        [
+          "Heart Gore",
+          "Used"
+        ],
+        [
+          "Savage Roar",
+          "Used"
+        ]
+      ]
+    }
+  ],
+  "arcana": [
+    {
+      "name": "Chalice of Vigor (+5)",
+      "count": "2 of 4 best skills",
+      "status": "med",
+      "tag": "Keep",
+      "skills": [
+        "Heart Gore",
+        "Insignia Explosion",
+        "Assault Stance",
+        "Shadow Fall"
+      ],
+      "best4": [
+        [
+          "Heart Gore",
+          "71%",
+          true
+        ],
+        [
+          "Quick Slice",
+          "41%",
+          false
+        ],
+        [
+          "Insignia Explosion",
+          "33%",
+          true
+        ],
+        [
+          "Savage Roar",
+          "25%",
+          false
+        ]
+      ],
+      "rollNote": "A new Unique Chalice · 4% chance it rolls better skills than yours"
+    },
+    {
+      "name": "Parchment of Magic (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Heart Gore",
+        "Quick Slice",
+        "Insignia Explosion",
+        "Shadowstrike"
+      ],
+      "best4": [
+        [
+          "Heart Gore",
+          "89%",
+          true
+        ],
+        [
+          "Quick Slice",
+          "83%",
+          true
+        ],
+        [
+          "Insignia Explosion",
+          "79%",
+          true
+        ],
+        [
+          "Whirlwind Slice",
+          "57%",
+          false
+        ]
+      ]
+    },
+    {
+      "name": "Compass of Vigor (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Savage Roar",
+        "Storm Rampage",
+        "Flash Slice",
+        "~~Defiance~~"
+      ],
+      "best4": [
+        [
+          "Ambush",
+          "82%",
+          false
+        ],
+        [
+          "Savage Roar",
+          "82%",
+          true
+        ],
+        [
+          "Storm Rampage",
+          "72%",
+          true
+        ],
+        [
+          "Flash Slice",
+          "62%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Bell of Magic (+4)",
+      "count": "4 of 4 best skills",
+      "status": "high",
+      "tag": "Enchant to +5",
+      "skills": [
+        "Assault Stance",
+        "Ambush Stance",
+        "Heightened Sixth Sense",
+        "Revitalization Contract"
+      ],
+      "best4": [
+        [
+          "Assault Stance",
+          "95%",
+          true
+        ],
+        [
+          "Ambush Stance",
+          "84%",
+          true
+        ],
+        [
+          "Heightened Sixth Sense",
+          "78%",
+          true
+        ],
+        [
+          "Revitalization Contract",
+          "75%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Mirror of Vigor (+4)",
+      "count": "3 of 4 best skills",
+      "status": "high",
+      "tag": "Enchant to +5",
+      "skills": [
+        "Rear Smite",
+        "Exploit Weakness",
+        "Defense Break",
+        "Determination"
+      ],
+      "best4": [
+        [
+          "Rear Smite",
+          "96%",
+          true
+        ],
+        [
+          "Impact Hit",
+          "89%",
+          false
+        ],
+        [
+          "Exploit Weakness",
+          "88%",
+          true
+        ],
+        [
+          "Defense Break",
+          "65%",
+          true
+        ]
+      ]
+    }
+  ],
+  "pve": {
+    "score": 66,
+    "tier": "Strong",
+    "pot": 80,
+    "shots": [
+      {
+        "src": "assets/screenshots/ber/pve_main.png",
+        "cap": "BER PvE — Tổng quan & 14 món trang bị"
+      },
+      {
+        "src": "assets/screenshots/ber/pve_upgrades.png",
+        "cap": "BER PvE — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/ber/pve_arcana.png",
+        "cap": "BER PvE — Arcana"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings (2)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~8 Syncs",
+        "keep": "Move Speed (100%), Accuracy (36%), Critical Hit (65%)",
+        "remove": "Defense Break",
+        "target": "Might (100%), Attack (100%), Precision (93%), Rear Smite (80%), Assault Stance (80%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings (1)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~8 Syncs",
+        "keep": "Precision (93%), Ambush Stance (34%), Exploit Weakness (80%)",
+        "remove": "Revitalization Contract",
+        "target": "Might (100%), Attack (100%), Move Speed (100%), Rear Smite (80%), Assault Stance (80%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+13)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~28 Syncs",
+        "keep": "Rear Smite (79%)",
+        "remove": "Block, Evasion, Accuracy",
+        "target": "Attack increase (100%), Damage Tolerance (96%), Perfect Chance (94%), Attack (90%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+15 ex+2)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~19 Syncs",
+        "keep": "Critical Damage Boost (100%), Accuracy (8%)",
+        "remove": "Defense, Status Effect Resist",
+        "target": "Double Chance (99%), Attack (97%), Rear Smite (80%), Assault Stance (79%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+12)",
+        "score": "69 → 94 (+25)",
+        "syncs": "~12 Syncs",
+        "keep": "Perfect Chance (95%), Rear Smite (81%), Exploit Weakness (72%)",
+        "remove": "Accuracy",
+        "target": "Move Speed (100%), Attack (97%), Assault Stance (80%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+13)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~25 Syncs",
+        "keep": "Exploit Weakness (73%), Rear Smite (80%)",
+        "remove": "Critical Hit, Accuracy",
+        "target": "Attack increase (100%), Double Chance (100%), Attack (93%), Assault Stance (80%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+15 ex+1)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~37 Syncs",
+        "keep": "Attack (77%)",
+        "remove": "HP, Status Effect Resist, Weapon Damage Tolerance",
+        "target": "Attack increase (100%), Double Chance (99%), Rear Smite (79%)"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Dagger",
+        "slot": "Main hand (+15 ex+4)",
+        "score": "79 → 96 (+17)",
+        "syncs": "~4 Syncs",
+        "keep": "Status Effect Chance, Weapon Damage Boost, Damage Boost, Multi-hit Chance, Might",
+        "remove": "Critical Attack",
+        "target": "Combat Speed (100%), Attack (92%), Precision (89%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Guard",
+        "slot": "Off hand (+15 ex+2)",
+        "score": "80 → 100 (+20)",
+        "syncs": "~6 Syncs",
+        "keep": "Multi-hit Chance, Combat Speed, Might, Weapon Damage Boost",
+        "remove": "Heart Gore",
+        "target": "Damage Boost (100%), Attack (93%), Precision (90%)"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Gloves",
+        "slot": "Gloves (+15 ex+2)",
+        "score": "75 → 95 (+20)",
+        "syncs": "~13 Syncs",
+        "keep": "Defense increase, Attack, Combat Speed, Rear Smite",
+        "remove": "Accuracy",
+        "target": "Perfect Chance (94%), Assault Stance (79%), Exploit Weakness (74%)"
+      },
+      {
+        "prio": "rad",
+        "name": "Breastplate / Necklace / Rings (1&2)",
+        "slot": "Torso / Neck / Ring",
+        "score": "81–95 Radiant",
+        "syncs": "0",
+        "keep": "All Best/Good",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      }
+    ]
+  },
+  "pvp": {
+    "score": 60,
+    "tier": "Strong",
+    "pot": 78,
+    "shots": [
+      {
+        "src": "assets/screenshots/ber/pvp_main.png",
+        "cap": "BER PvP — Tổng quan Soul Resonance"
+      },
+      {
+        "src": "assets/screenshots/ber/pvp_upgrades.png",
+        "cap": "BER PvP — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/ber/pvp_arcana.png",
+        "cap": "BER PvP — Arcana"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+15 ex+2)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~13 Syncs",
+        "keep": "Damage Boost (100%), Critical Hit (18%)",
+        "remove": "Determination, Impact Hit",
+        "target": "Perfect Chance (94%), Status Effect Resist (72%), Willpower (57%), Accuracy (49%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings (1)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~14 Syncs",
+        "keep": "Precision (93%), Revitalization Contract (53%)",
+        "remove": "Ambush Stance, Exploit Weakness",
+        "target": "Might (100%), Move Speed (100%), Intelligence (88%), Accuracy (72%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+12)",
+        "score": "44 → 94 (+50)",
+        "syncs": "~17 Syncs",
+        "keep": "Accuracy (49%), Perfect Chance (95%)",
+        "remove": "Exploit Weakness, Rear Smite",
+        "target": "Move Speed (99%), Status Effect Resist (80%), Willpower (57%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+13)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~27 Syncs",
+        "keep": "Accuracy (39%)",
+        "remove": "Block, Evasion, Rear Smite",
+        "target": "Damage Tolerance (98%), Attack increase (90%), Status Effect Resist (72%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings (2)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~9 Syncs",
+        "keep": "Move Speed (100%), Accuracy (72%), Critical Hit (17%)",
+        "remove": "Defense Break",
+        "target": "Might (100%), Precision (93%), Intelligence (88%), Attack (56%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+13)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~28 Syncs",
+        "keep": "Accuracy (40%)",
+        "remove": "Critical Hit, Exploit Weakness, Rear Smite",
+        "target": "Attack increase (94%), Status Effect Resist (74%), Double Chance (65%)"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Gloves",
+        "slot": "Gloves (+15 ex+2)",
+        "score": "70 → 90 (+20)",
+        "syncs": "~12 Syncs",
+        "keep": "Defense increase, Attack, Combat Speed, Accuracy",
+        "remove": "Rear Smite",
+        "target": "Status Effect Resist (77%), Endurance Penetration (63%), Willpower (48%)"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Ring (1)",
+        "slot": "Ring (+15 ex+2)",
+        "score": "71 → 88 (+17)",
+        "syncs": "~10 Syncs",
+        "keep": "Attack, Accuracy, Quick Slice, Savage Roar, Insignia Explosion",
+        "remove": "Storm Rampage",
+        "target": "Might (100%), Precision (93%), Heart Gore (66%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+15 ex+2)",
+        "score": "69 → 94 (+25)",
+        "syncs": "~17 Syncs",
+        "keep": "Status Effect Resist, Critical Damage Boost, Accuracy",
+        "remove": "Defense",
+        "target": "Double Chance (99%), Endurance Penetration (61%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+15 ex+1)",
+        "score": "69 → 94 (+25)",
+        "syncs": "~21 Syncs",
+        "keep": "Weapon Damage Tolerance, Attack, Status Effect Resist",
+        "remove": "HP",
+        "target": "Attack increase (90%), Critical Damage Tolerance (77%)"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Dagger",
+        "slot": "Main hand (+15 ex+4)",
+        "score": "79 → 96 (+17)",
+        "syncs": "~5 Syncs",
+        "keep": "Status Effect Chance, Weapon Damage Boost, Damage Boost, Multi-hit Chance, Might",
+        "remove": "Critical Attack",
+        "target": "Combat Speed (100%), Precision (90%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Guard",
+        "slot": "Off hand (+15 ex+2)",
+        "score": "75 → 95 (+20)",
+        "syncs": "~8 Syncs",
+        "keep": "Multi-hit Chance, Combat Speed, Might, Weapon Damage Boost",
+        "remove": "Heart Gore",
+        "target": "Precision (95%), Damage Boost (92%), Status Effect Chance (79%)"
+      },
+      {
+        "prio": "rad",
+        "name": "Necklace / Ring (2)",
+        "slot": "Neck / Ring",
+        "score": "85–88 Radiant",
+        "syncs": "0",
+        "keep": "All Best/Good",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      }
+    ]
+  }
+}

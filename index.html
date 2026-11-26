@@ -1248,15 +1248,30 @@
 
     async function loadLiveData() {
       try {
-        const res = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
-        if (!res.ok) return;
-        const payload = await res.json();
-        if (payload.AVATARS) AVATARS = payload.AVATARS;
-        if (payload.ICONS) ICONS = payload.ICONS;
-        if (payload.SKILL_ICONS) SKILL_ICONS = payload.SKILL_ICONS;
-        if (payload.DB) DB = payload.DB;
-        if (payload.updatedAt) {
-          document.getElementById("syncTime").textContent = `Auto-Sync: ${payload.updatedAt}`;
+        const ts = Date.now();
+        const metaRes = await fetch(`./data/meta.json?t=${ts}`, { cache: "no-store" });
+        if (!metaRes.ok) return;
+        const meta = await metaRes.json();
+        if (meta.AVATARS) AVATARS = meta.AVATARS;
+        if (meta.ICONS) ICONS = meta.ICONS;
+        if (meta.SKILL_ICONS) SKILL_ICONS = meta.SKILL_ICONS;
+
+        const members = meta.members || Object.keys(DB);
+        const results = await Promise.all(
+          members.map(async name => {
+            try {
+              const r = await fetch(`./data/${name}.json?t=${ts}`, { cache: "no-store" });
+              return r.ok ? [name, await r.json()] : null;
+            } catch {
+              return null;
+            }
+          })
+        );
+        results.forEach(item => {
+          if (item) DB[item[0]] = item[1];
+        });
+        if (meta.updatedAt) {
+          document.getElementById("syncTime").textContent = `Auto-Sync: ${meta.updatedAt}`;
         }
         render();
       } catch (e) {

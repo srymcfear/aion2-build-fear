@@ -1,50 +1,66 @@
 import json
-import re
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 MEMBERS_FILE = ROOT / "members.json"
-DATA_FILE = ROOT / "data.json"
+DATA_DIR = ROOT / "data"
+META_FILE = DATA_DIR / "meta.json"
 
 
-def extract_meta_stats(page):
-    """Extract live CP, iLvl, Avatar, Soul Resonance score/tier/potential from rendered DOM."""
+def extract_page_data(page):
+    """Extract live CP, iLvl, Avatar, Soul Resonance, and Gear ratings from rendered DOM."""
     return page.evaluate(
         """() => {
-            const text = document.body.innerText;
+            const text = document.body.innerText.replace(/\\r/g, '');
             const avatarEl = document.querySelector('img[src*="/img/p/"]');
             const avatar = avatarEl ? avatarEl.src : null;
 
-            // Combat Power & Item Level
-            const cpMatch = text.match(/COMBAT POWER\\s*\\n\\s*([\\d,]+)/i);
-            const ilvlMatch = text.match(/ITEM LEVEL\\s*\\n\\s*([\\d,]+)/i);
+            const cpMatch = text.match(/COMBAT POWER[\\s\\S]{0,60}?([\\d,]{5,})/i);
+            const ilvlMatch = text.match(/ITEM LEVEL[\\s\\S]{0,60}?([\\d,]{3,})/i);
 
-            // Soul Resonance
-            const srMatch = text.match(/(\\d+)\\s+(Dormant|Stirring|Strong|Radiant)\\s+SOUL RESONANCE/i)
-                         || text.match(/SOUL RESONANCE[\\s\\S]{0,120}?(\\d+)\\s+(Dormant|Stirring|Strong|Radiant)/i);
-            const potMatch = text.match(/(\\d+)\\s+within reach/i);
+            // Match Soul Resonance block specifically
+            const srBlock = text.match(/SOUL RESONANCE[\\s\\S]{0,200}/i);
+            let score = null, tier = null, pot = null;
+            if (srBlock) {
+                const s1 = srBlock[0].match(/(\\d{1,3})\\s+(Dormant|Stirring|Strong|Radiant)/i);
+                if (s1) {
+                    score = parseInt(s1[1], 10);
+                    tier = s1[2];
+                }
+            }
+            if (score === null) {
+                const s2 = text.match(/(\\d{1,3})\\s+(Dormant|Stirring|Strong|Radiant)\\s+SOUL RESONANCE/i);
+                if (s2) {
+                    score = parseInt(s2[1], 10);
+                    tier = s2[2];
+                }
+            }
+            const potMatch = text.match(/(\\d{1,3})\\s+within reach/i);
+            if (potMatch) pot = parseInt(potMatch[1], 10);
 
             return {
                 avatar,
                 cp: cpMatch ? cpMatch[1] : null,
                 ilvl: ilvlMatch ? ilvlMatch[1] : null,
-                score: srMatch ? parseInt(srMatch[1], 10) : null,
-                tier: srMatch ? srMatch[2] : null,
-                pot: potMatch ? parseInt(potMatch[1], 10) : null,
+                score,
+                tier,
+                pot
             };
         }"""
     )
 
 
 def main():
+    DATA_DIR.mkdir(exist_ok=True)
     config = json.loads(MEMBERS_FILE.read_text(encoding="utf-8"))
-    data = json.loads(DATA_FILE.read_text(encoding="utf-8")) if DATA_FILE.exists() else {"DB": {}, "AVATARS": {}, "ICONS": {}, "SKILL_ICONS": {}}
+    meta = json.loads(META_FILE.read_text(encoding="utf-8")) if META_FILE.exists() else {"AVATARS": {}, "ICONS": {}, "SKILL_ICONS": {}}
 
     server = config.get("server", "zikel")
     region = config.get("region", "as")
     members = config.get("members", [])
+    meta["members"] = members
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -52,59 +68,63 @@ def main():
         page = context.new_page()
 
         for name in members:
+            member_file = DATA_DIR / f"{name}.json"
+            entry = json.loads(member_file.read_text(encoding="utf-8")) if member_file.exists() else {"name": name}
             base_url = f"https://aion2index.com/c/{region}/{server}/{name}/upgrades"
             print(f"Fetching {name}...")
+
             try:
                 # 1. PvE Meta
-                page.goto(base_url, wait_until="networkidle", timeout=45000)
-                page.wait_for_timeout(1500)
-                pve_stats = extract_meta_stats(page)
+                page.goto(base_url, wait_until="domcontentloaded", timeout=45000)
+                page.wait_for_selector("text=SOUL RESONANCE", timeout=25000)
+                page.wait_for_timeout(1200)
+                pve = extract_page_data(page)
 
-                if pve_stats.get("avatar"):
-                    data.setdefault("AVATARS", {})[name] = pve_stats["avatar"]
-
-                entry = data.setdefault("DB", {}).setdefault(name, {"name": name})
-                if pve_stats.get("cp"):
-                    entry["cp"] = pve_stats["cp"]
-                if pve_stats.get("ilvl"):
-                    entry["ilvl"] = pve_stats["ilvl"]
+                if pve.get("avatar"):
+                    meta.setdefault("AVATARS", {})[name] = pve["avatar"]
+                if pve.get("cp"):
+                    entry["cp"] = pve["cp"]
+                if pve.get("ilvl"):
+                    entry["ilvl"] = pve["ilvl"]
 
                 pve_block = entry.setdefault("pve", {})
-                if pve_stats.get("score") is not None:
-                    pve_block["score"] = pve_stats["score"]
-                if pve_stats.get("tier"):
-                    pve_block["tier"] = pve_stats["tier"]
-                if pve_stats.get("pot") is not None:
-                    pve_block["pot"] = pve_stats["pot"]
+                if pve.get("score") is not None:
+                    pve_block["score"] = pve["score"]
+                if pve.get("tier"):
+                    pve_block["tier"] = pve["tier"]
+                if pve.get("pot") is not None:
+                    pve_block["pot"] = pve["pot"]
 
                 # 2. PvP Meta
-                page.goto(f"{base_url}?meta=pvp", wait_until="networkidle", timeout=45000)
-                page.wait_for_timeout(1500)
-                pvp_stats = extract_meta_stats(page)
+                page.goto(f"{base_url}?meta=pvp", wait_until="domcontentloaded", timeout=45000)
+                page.wait_for_selector("text=SOUL RESONANCE", timeout=25000)
+                page.wait_for_timeout(1200)
+                pvp = extract_page_data(page)
 
-                if pvp_stats.get("cp"):
-                    entry["cpPvp"] = pvp_stats["cp"]
-                if pvp_stats.get("ilvl"):
-                    entry["ilvlPvp"] = pvp_stats["ilvl"]
+                if pvp.get("cp"):
+                    entry["cpPvp"] = pvp["cp"]
+                if pvp.get("ilvl"):
+                    entry["ilvlPvp"] = pvp["ilvl"]
 
                 pvp_block = entry.setdefault("pvp", {})
-                if pvp_stats.get("score") is not None:
-                    pvp_block["score"] = pvp_stats["score"]
-                if pvp_stats.get("tier"):
-                    pvp_block["tier"] = pvp_stats["tier"]
-                if pvp_stats.get("pot") is not None:
-                    pvp_block["pot"] = pvp_stats["pot"]
+                if pvp.get("score") is not None:
+                    pvp_block["score"] = pvp["score"]
+                if pvp.get("tier"):
+                    pvp_block["tier"] = pvp["tier"]
+                if pvp.get("pot") is not None:
+                    pvp_block["pot"] = pvp["pot"]
 
-                print(f"  OK: PvE={pve_block.get('score')} ({pve_block.get('tier')}), PvP={pvp_block.get('score')} ({pvp_block.get('tier')})")
+                member_file.write_text(json.dumps(entry, ensure_ascii=False, indent=2), encoding="utf-8")
+                print(f"  OK: CP={entry.get('cp')} | PvE={pve_block.get('score')} ({pve_block.get('tier')}) -> {pve_block.get('pot')} | PvP={pvp_block.get('score')} ({pvp_block.get('tier')}) -> {pvp_block.get('pot')}")
             except Exception as exc:
                 print(f"  WARN: Failed to update {name}: {exc}")
 
         browser.close()
 
     vn_tz = timezone(timedelta(hours=7))
-    data["updatedAt"] = datetime.now(vn_tz).strftime("%Y-%m-%d %H:%M (UTC+7)")
-    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Saved updated data.json at", data["updatedAt"])
+    meta["updatedAt"] = datetime.now(vn_tz).strftime("%Y-%m-%d %H:%M (UTC+7)")
+    META_FILE.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Saved data/meta.json at", meta["updatedAt"])
 
 
 if __name__ == "__main__":

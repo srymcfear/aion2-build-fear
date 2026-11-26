@@ -1,0 +1,832 @@
+{
+  "name": "TEDs",
+  "title": "Ranger · Zikel",
+  "cls": "Ranger · Lv.45 · Asmodian",
+  "cp": "198,774",
+  "cpPvp": "198,774",
+  "ilvl": "3,009",
+  "ilvlPvp": "3,009",
+  "rank": "#307 Ranger · #1,867 Zikel",
+  "url": "https://aion2index.com/c/as/zikel/TEDs/upgrades",
+  "gear": [
+    {
+      "name": "Splendent Ebony Dragon Lord Bow",
+      "slot": "Main hand (+15 ex+3)",
+      "score": "83 Radiant",
+      "lines": [
+        [
+          "Damage Boost",
+          "Best"
+        ],
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ],
+        [
+          "Might",
+          "Best"
+        ],
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Front Attack",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Guard",
+      "slot": "Off hand (+15 ex+2)",
+      "score": "60 Strong (PvP: 70)",
+      "lines": [
+        [
+          "Combat Speed",
+          "Best"
+        ],
+        [
+          "Multi-hit Chance",
+          "Best"
+        ],
+        [
+          "Status Effect Chance",
+          "Weak"
+        ],
+        [
+          "Weapon Damage Boost",
+          "Best"
+        ],
+        [
+          "Snipe",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Helm",
+      "slot": "Helmet (+12)",
+      "score": "35 Stirring",
+      "lines": [
+        [
+          "Double Chance",
+          "Best"
+        ],
+        [
+          "Dexterity",
+          "Weak"
+        ],
+        [
+          "Concentrated Fire",
+          "Weak"
+        ],
+        [
+          "Melee Fire",
+          "Weak"
+        ],
+        [
+          "Hunter's Soul",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Pauldrons",
+      "slot": "Shoulders (+12)",
+      "score": "0 Dormant (PvP: 19)",
+      "lines": [
+        [
+          "Constitution",
+          "Weak"
+        ],
+        [
+          "Dexterity",
+          "Weak"
+        ],
+        [
+          "Vigilant Eye",
+          "Weak"
+        ],
+        [
+          "Rooting Eye",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Breastplate",
+      "slot": "Torso (+10)",
+      "score": "19 Dormant",
+      "lines": [
+        [
+          "Accuracy",
+          "Good"
+        ],
+        [
+          "Double Resist",
+          "Weak"
+        ],
+        [
+          "Concentrated Fire",
+          "Weak"
+        ],
+        [
+          "Melee Fire",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Greaves",
+      "slot": "Pants (+10)",
+      "score": "38 Stirring (PvP: 63)",
+      "lines": [
+        [
+          "Accuracy",
+          "Fine"
+        ],
+        [
+          "Willpower",
+          "Weak"
+        ],
+        [
+          "Vigilant Eye",
+          "Weak"
+        ],
+        [
+          "Focused Eye",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Gloves",
+      "slot": "Gloves (+0)",
+      "score": "20 Dormant (PvP: 35)",
+      "lines": [
+        [
+          "Natural HP Regen",
+          "Weak"
+        ],
+        [
+          "Dexterity",
+          "Weak"
+        ],
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "HP",
+          "Weak"
+        ],
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Boots",
+      "slot": "Boots (+10)",
+      "score": "25 Dormant (PvP: 19)",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Critical Damage Defense",
+          "Weak"
+        ],
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ],
+        [
+          "Melee Fire",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Nuakum Cloak",
+      "slot": "Cape (+15 ex+2)",
+      "score": "63 Strong (PvP: 19)",
+      "lines": [
+        [
+          "Status Effect Resist",
+          "Weak"
+        ],
+        [
+          "Hunter's Resolve",
+          "Used"
+        ],
+        [
+          "Focused Eye",
+          "Used"
+        ],
+        [
+          "Hunter's Soul",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Necklace",
+      "slot": "Necklace (+15 ex+2)",
+      "score": "85 Radiant (PvP: 80)",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Accuracy",
+          "Best"
+        ],
+        [
+          "Critical Hit",
+          "Best"
+        ],
+        [
+          "Focused Eye",
+          "Used"
+        ],
+        [
+          "Hunter's Resolve",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (1)",
+      "slot": "Earring (+15 ex+2)",
+      "score": "81 Radiant (PvP: 63)",
+      "lines": [
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Defense",
+          "Fine"
+        ],
+        [
+          "Precision",
+          "Best"
+        ],
+        [
+          "Vigilant Eye",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Enraged Kromede Earrings (2)",
+      "slot": "Earring (+15 ex+2)",
+      "score": "38 Stirring (PvP: 19)",
+      "lines": [
+        [
+          "MP",
+          "Weak"
+        ],
+        [
+          "Flight Power",
+          "Weak"
+        ],
+        [
+          "Melee Fire",
+          "Used"
+        ],
+        [
+          "Hunter's Resolve",
+          "Used"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Ring (1)",
+      "slot": "Ring (+15 ex+2)",
+      "score": "50 Stirring (PvP: 70)",
+      "lines": [
+        [
+          "Critical Hit",
+          "Good"
+        ],
+        [
+          "Critical Hit Resist",
+          "Weak"
+        ],
+        [
+          "Tempest Shot",
+          "Used"
+        ],
+        [
+          "Drill Dart",
+          "Used"
+        ],
+        [
+          "Arrow Scattershot",
+          "Weak"
+        ]
+      ]
+    },
+    {
+      "name": "Splendent Dark Dragon Lord Ring (2)",
+      "slot": "Ring (+15 ex+2)",
+      "score": "85 Radiant (PvP: 90)",
+      "lines": [
+        [
+          "Precision",
+          "Best"
+        ],
+        [
+          "Attack",
+          "Best"
+        ],
+        [
+          "Critical Hit",
+          "Good"
+        ],
+        [
+          "Deadshot",
+          "Used"
+        ],
+        [
+          "Tempest Shot",
+          "Used"
+        ]
+      ]
+    }
+  ],
+  "arcana": [
+    {
+      "name": "Chalice of Vigor (+4)",
+      "count": "1 of 4 best skills",
+      "status": "med",
+      "tag": "Keep",
+      "skills": [
+        "Drill Dart",
+        "Deadshot",
+        "Hunter's Resolve",
+        "Rooting Eye"
+      ],
+      "best4": [
+        [
+          "Tempest Shot",
+          "57%",
+          false
+        ],
+        [
+          "Snipe",
+          "56%",
+          false
+        ],
+        [
+          "Gale Arrow",
+          "27%",
+          false
+        ],
+        [
+          "Drill Dart",
+          "25%",
+          true
+        ]
+      ],
+      "rollNote": "A new Unique Chalice · 32% chance it rolls better skills than yours"
+    },
+    {
+      "name": "Parchment of Magic (+4)",
+      "count": "3 of 4 best skills",
+      "status": "high",
+      "tag": "Enchant to +5",
+      "skills": [
+        "Snipe",
+        "Drill Dart",
+        "Burst Arrow",
+        "Explosion Trap"
+      ],
+      "best4": [
+        [
+          "Tempest Shot",
+          "90%",
+          false
+        ],
+        [
+          "Snipe",
+          "87%",
+          true
+        ],
+        [
+          "Drill Dart",
+          "75%",
+          true
+        ],
+        [
+          "Burst Arrow",
+          "65%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Compass of Vigor (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Gale Arrow",
+        "Deadshot",
+        "Suppressing Arrow",
+        "~~Defiance~~"
+      ],
+      "best4": [
+        [
+          "Gale Arrow",
+          "86%",
+          true
+        ],
+        [
+          "Deadshot",
+          "84%",
+          true
+        ],
+        [
+          "Marking Shot",
+          "62%",
+          false
+        ],
+        [
+          "Suppressing Arrow",
+          "61%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Bell of Magic (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Hunter's Resolve",
+        "Wind Vigor",
+        "Vigilant Eye",
+        "Revitalization Contract"
+      ],
+      "best4": [
+        [
+          "Hunter's Resolve",
+          "95%",
+          true
+        ],
+        [
+          "Rooting Eye",
+          "82%",
+          false
+        ],
+        [
+          "Wind Vigor",
+          "79%",
+          true
+        ],
+        [
+          "Vigilant Eye",
+          "72%",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "Mirror of Magic (+5)",
+      "count": "3 of 4 best skills",
+      "status": "rad",
+      "tag": "On meta",
+      "skills": [
+        "Focused Eye",
+        "Hunter's Soul",
+        "Concentrated Fire",
+        "Unyielding Resolve"
+      ],
+      "best4": [
+        [
+          "Focused Eye",
+          "95%",
+          true
+        ],
+        [
+          "Hunter's Soul",
+          "88%",
+          true
+        ],
+        [
+          "Concentrated Fire",
+          "77%",
+          true
+        ],
+        [
+          "Melee Fire",
+          "72%",
+          false
+        ]
+      ]
+    }
+  ],
+  "pve": {
+    "score": 49,
+    "tier": "Stirring",
+    "pot": 74,
+    "shots": [
+      {
+        "src": "assets/screenshots/teds/pve_main.png",
+        "cap": "TEDs PvE — Tổng quan & 14 món trang bị"
+      },
+      {
+        "src": "assets/screenshots/teds/pve_upgrades.png",
+        "cap": "TEDs PvE — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/teds/pve_arcana.png",
+        "cap": "TEDs PvE — Arcana"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+10)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~19 Syncs",
+        "keep": "Accuracy (59%)",
+        "remove": "Double Resist, Melee Fire, Concentrated Fire",
+        "target": "Damage Boost (100%), Attack (97%), Perfect Chance (94%), Critical Hit (81%), Focused Eye (78%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+12)",
+        "score": "0 → 100 (+100)",
+        "syncs": "~25 Syncs",
+        "keep": "Không có dòng giữ",
+        "remove": "Dexterity, Vigilant Eye, Rooting Eye, Constitution",
+        "target": "Double Chance (100%), Critical Damage Boost (100%), Attack (98%), Critical Hit (83%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Guard",
+        "slot": "Off hand (+15 ex+2)",
+        "score": "60 → 100 (+40)",
+        "syncs": "~10 Syncs",
+        "keep": "Combat Speed (100%), Multi-hit Chance (99%), Weapon Damage Boost (100%)",
+        "remove": "Snipe, Status Effect Chance",
+        "target": "Might (100%), Damage Boost (100%), Precision (97%), Attack (90%)"
+      },
+      {
+        "prio": "high",
+        "name": "Splendent Dark Dragon Lord Gloves",
+        "slot": "Gloves (+0)",
+        "score": "20 → 100 (+80)",
+        "syncs": "~22 Syncs",
+        "keep": "Attack (97%)",
+        "remove": "Natural HP Regen, Dexterity, HP, Critical Hit Resist",
+        "target": "Combat Speed (100%), Perfect Chance (95%), Focused Eye (79%), Hunter's Resolve (77%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+12)",
+        "score": "35 → 95 (+60)",
+        "syncs": "~18 Syncs",
+        "keep": "Double Chance (100%), Hunter's Soul (13%)",
+        "remove": "Dexterity, Melee Fire, Concentrated Fire",
+        "target": "Attack increase (99%), Attack (97%), Focused Eye (78%), Hunter's Resolve (76%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+10)",
+        "score": "25 → 100 (+75)",
+        "syncs": "~24 Syncs",
+        "keep": "Attack",
+        "remove": "Critical Damage Defense, Critical Hit Resist, Melee Fire",
+        "target": "Chỉ số Meta Boots"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+10)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~19 Syncs",
+        "keep": "Accuracy, Focused Eye",
+        "remove": "Willpower, Vigilant Eye",
+        "target": "Chỉ số Meta Pants"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Ring (1)",
+        "slot": "Ring (+15 ex+2)",
+        "score": "50 → 90 (+40)",
+        "syncs": "~15 Syncs",
+        "keep": "Critical Hit, Tempest Shot, Drill Dart",
+        "remove": "Arrow Scattershot, Critical Hit Resist",
+        "target": "Chỉ số Meta Ring"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Earrings (2)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "38 → 88 (+50)",
+        "syncs": "~20 Syncs",
+        "keep": "Melee Fire, Hunter's Resolve",
+        "remove": "MP, Flight Power",
+        "target": "Chỉ số Meta Earring"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~11 Syncs",
+        "keep": "Hunter's Resolve, Focused Eye, Hunter's Soul",
+        "remove": "Status Effect Resist",
+        "target": "Chỉ số Meta Cape"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Ebony Dragon Lord Bow",
+        "slot": "Main hand (+15 ex+3)",
+        "score": "83 → 100 (+17)",
+        "syncs": "~5 Syncs",
+        "keep": "Damage Boost, Weapon Damage Boost, Might, Combat Speed, Multi-hit Chance",
+        "remove": "Front Attack",
+        "target": "Chỉ số Meta Bow"
+      },
+      {
+        "prio": "rad",
+        "name": "Necklace / Earring (1) / Ring (2)",
+        "slot": "Neck / Ear / Ring",
+        "score": "81–85 Radiant",
+        "syncs": "0",
+        "keep": "All Best/Good",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      }
+    ]
+  },
+  "pvp": {
+    "score": 49,
+    "tier": "Stirring",
+    "pot": 75,
+    "shots": [
+      {
+        "src": "assets/screenshots/teds/pvp_main.png",
+        "cap": "TEDs PvP — Tổng quan Soul Resonance"
+      },
+      {
+        "src": "assets/screenshots/teds/pvp_upgrades.png",
+        "cap": "TEDs PvP — Upgrade Priority"
+      },
+      {
+        "src": "assets/screenshots/teds/pvp_arcana.png",
+        "cap": "TEDs PvP — Arcana"
+      }
+    ],
+    "upgrades": [
+      {
+        "prio": "high",
+        "name": "Nuakum Boots",
+        "slot": "Boots (+10)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~16 Syncs",
+        "keep": "Attack (27%)",
+        "remove": "Critical Damage Defense, Critical Hit Resist, Melee Fire",
+        "target": "Move Speed (99%), Status Effect Resist (73%), Critical Hit (69%), Willpower (50%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Breastplate",
+        "slot": "Torso (+10)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~17 Syncs",
+        "keep": "Accuracy (39%)",
+        "remove": "Double Resist, Melee Fire, Concentrated Fire",
+        "target": "Damage Boost (100%), Perfect Chance (94%), Critical Hit (86%), Status Effect Resist (70%)"
+      },
+      {
+        "prio": "high",
+        "name": "Nuakum Pauldrons",
+        "slot": "Shoulders (+12)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~20 Syncs",
+        "keep": "Dexterity (41%)",
+        "remove": "Rooting Eye, Vigilant Eye, Constitution",
+        "target": "Double Chance (100%), Critical Damage Boost (99%), Critical Hit (87%), Status Effect Resist (71%)"
+      },
+      {
+        "prio": "high",
+        "name": "Enraged Kromede Earrings (2)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~20 Syncs",
+        "keep": "Hunter's Resolve (33%)",
+        "remove": "MP, Flight Power, Melee Fire",
+        "target": "Might (100%), Move Speed (100%), Precision (99%), Intelligence (65%), Attack (58%)"
+      },
+      {
+        "prio": "high",
+        "name": "Splendent Dark Dragon Lord Gloves",
+        "slot": "Gloves (+0)",
+        "score": "35 → 95 (+60)",
+        "syncs": "~19 Syncs",
+        "keep": "Dexterity (40%), Attack (97%)",
+        "remove": "Natural HP Regen, HP, Critical Hit Resist",
+        "target": "Combat Speed (100%), Status Effect Resist (73%), Critical Hit (70%), Endurance Penetration (58%)"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Guard",
+        "slot": "Off hand (+15 ex+2)",
+        "score": "70 → 90 (+20)",
+        "syncs": "~7 Syncs",
+        "keep": "Combat Speed, Multi-hit Chance, Status Effect Chance, Weapon Damage Boost",
+        "remove": "Snipe",
+        "target": "Chỉ số PvP Off hand"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Helm",
+        "slot": "Helmet (+12)",
+        "score": "35 → 95 (+60)",
+        "syncs": "~22 Syncs",
+        "keep": "Double Chance, Dexterity",
+        "remove": "Melee Fire, Concentrated Fire, Hunter's Soul",
+        "target": "Chỉ số PvP Helmet"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Greaves",
+        "slot": "Pants (+10)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~9 Syncs",
+        "keep": "Accuracy, Willpower, Focused Eye",
+        "remove": "Vigilant Eye",
+        "target": "Chỉ số PvP Pants"
+      },
+      {
+        "prio": "med",
+        "name": "Nuakum Cloak",
+        "slot": "Cape (+15 ex+2)",
+        "score": "19 → 94 (+75)",
+        "syncs": "~34 Syncs",
+        "keep": "Status Effect Resist",
+        "remove": "Hunter's Soul, Hunter's Resolve, Focused Eye",
+        "target": "Chỉ số PvP Cape"
+      },
+      {
+        "prio": "med",
+        "name": "Enraged Kromede Earrings (1)",
+        "slot": "Earring (+15 ex+2)",
+        "score": "63 → 88 (+25)",
+        "syncs": "~13 Syncs",
+        "keep": "Attack, Defense, Precision",
+        "remove": "Vigilant Eye",
+        "target": "Chỉ số PvP Earring"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Dark Dragon Lord Ring (1)",
+        "slot": "Ring (+15 ex+2)",
+        "score": "70 → 90 (+20)",
+        "syncs": "~10 Syncs",
+        "keep": "Critical Hit, Critical Hit Resist, Tempest Shot, Drill Dart",
+        "remove": "Arrow Scattershot",
+        "target": "Chỉ số PvP Ring"
+      },
+      {
+        "prio": "med",
+        "name": "Splendent Ebony Dragon Lord Bow",
+        "slot": "Main hand (+15 ex+3)",
+        "score": "83 → 100 (+17)",
+        "syncs": "~5 Syncs",
+        "keep": "Damage Boost, Weapon Damage Boost, Might, Combat Speed, Multi-hit Chance",
+        "remove": "Front Attack",
+        "target": "Chỉ số PvP Bow"
+      },
+      {
+        "prio": "rad",
+        "name": "Necklace / Ring (2)",
+        "slot": "Neck / Ring",
+        "score": "80–90 Radiant",
+        "syncs": "0",
+        "keep": "All Best/Good",
+        "remove": "Không cần xóa",
+        "target": "Đạt chuẩn Radiant"
+      }
+    ]
+  }
+}
