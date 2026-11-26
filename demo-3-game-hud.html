@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEAR — Dark Fantasy Game HUD (3D Three.js)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg: #070812;
+      --hud: rgba(14, 16, 30, 0.84);
+      --hud-2: rgba(24, 28, 50, 0.88);
+      --border: rgba(139, 92, 246, 0.32);
+      --amethyst: #8b5cf6;
+      --ice: #38bdf8;
+      --crimson: #e11d48;
+      --silver: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg); color: var(--silver); min-height: 100vh; overflow-x: hidden;
+    }
+    #aether-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    .hud-wrap { position: relative; z-index: 1; max-width: 1380px; margin: 0 auto; padding: 20px 20px 60px; }
+
+    .fantasy-title { font-family: 'Cinzel', serif; letter-spacing: 0.04em; }
+
+    /* Top Character Selector Bar */
+    .hud-nav {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;
+      background: var(--hud); backdrop-filter: blur(12px);
+      border: 1px solid var(--border); border-radius: 14px; padding: 14px 20px; margin-bottom: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .nav-roster { display: flex; gap: 10px; flex-wrap: wrap; }
+    .hero-tab {
+      background: var(--hud-2); border: 1px solid rgba(148,163,184,0.18); color: var(--muted);
+      padding: 10px 18px; border-radius: 10px; cursor: pointer; transition: 0.22s; text-align: left;
+    }
+    .hero-tab:hover { border-color: var(--ice); color: #fff; }
+    .hero-tab.active {
+      border-color: var(--amethyst); color: #fff;
+      background: linear-gradient(135deg, rgba(139,92,246,0.28), rgba(56,189,248,0.12));
+      box-shadow: 0 0 20px rgba(139,92,246,0.3);
+    }
+    .hero-tab .ht-name { font-weight: 700; font-size: 14px; display: block; }
+    .hero-tab .ht-sub { font-size: 11px; color: var(--ice); }
+
+    .mode-switch { display: flex; gap: 8px; }
+    .mode-pill {
+      background: var(--hud-2); border: 1px solid var(--border); color: var(--muted);
+      padding: 8px 18px; border-radius: 999px; font-weight: 700; font-size: 13px; cursor: pointer;
+    }
+    .mode-pill.active { background: var(--ice); color: #070812; border-color: var(--ice); }
+    .mode-pill:disabled { opacity: 0.35; cursor: not-allowed; }
+
+    /* Main HUD Split */
+    .hud-grid { display: grid; grid-template-columns: 400px 1fr; gap: 20px; align-items: start; }
+    @media (max-width: 1024px) { .hud-grid { grid-template-columns: 1fr; } }
+
+    .panel {
+      background: var(--hud); backdrop-filter: blur(12px);
+      border: 1px solid var(--border); border-radius: 16px; padding: 20px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+    }
+
+    /* Resonance Ring */
+    .resonance-box {
+      display: flex; align-items: center; gap: 18px; padding-bottom: 18px;
+      border-bottom: 1px solid rgba(148,163,184,0.15); margin-bottom: 18px;
+    }
+    .ring-wrap { position: relative; width: 88px; height: 88px; flex-shrink: 0; }
+    .ring-text {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .ring-score { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
+    .ring-tier { font-size: 10px; color: var(--ice); text-transform: uppercase; margin-top: 2px; }
+
+    /* Slot Grid */
+    .slot-list { display: flex; flex-direction: column; gap: 8px; max-height: 540px; overflow-y: auto; padding-right: 4px; }
+    .slot-item {
+      display: flex; justify-content: space-between; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 10px; background: var(--hud-2);
+      border: 1px solid rgba(148,163,184,0.12); cursor: pointer; transition: 0.18s;
+    }
+    .slot-item:hover, .slot-item.selected { border-color: var(--ice); background: rgba(56,189,248,0.12); }
+    .slot-name { font-size: 13px; font-weight: 600; color: #fff; }
+    .slot-sub { font-size: 11px; color: var(--muted); }
+    .slot-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+    .sb-high { background: rgba(225,29,72,0.2); color: #fda4af; border: 1px solid rgba(225,29,72,0.4); }
+    .sb-med { background: rgba(56,189,248,0.15); color: var(--ice); border: 1px solid rgba(56,189,248,0.35); }
+    .sb-rad { background: rgba(139,92,246,0.22); color: #ddd6fe; border: 1px solid rgba(139,92,246,0.45); }
+
+    /* Right Inspector */
+    .inspector-section { display: flex; flex-direction: column; gap: 18px; }
+    .detail-box {
+      background: linear-gradient(145deg, rgba(139,92,246,0.12), var(--hud-2));
+      border: 1px solid var(--amethyst); border-radius: 14px; padding: 18px;
+    }
+    .detail-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .remove-banner {
+      background: rgba(225,29,72,0.16); border-left: 4px solid var(--crimson);
+      padding: 10px 14px; border-radius: 8px; margin-bottom: 10px; font-size: 13px;
+    }
+    .target-banner {
+      background: rgba(56,189,248,0.12); border-left: 4px solid var(--ice);
+      padding: 10px 14px; border-radius: 8px; font-size: 13px;
+    }
+
+    .arcana-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+    .arcana-tile {
+      background: var(--hud-2); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 12px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="aether-canvas"></canvas>
+
+  <div class="hud-wrap">
+    <nav class="hud-nav">
+      <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+        <div class="fantasy-title" style="font-size:18px; font-weight:800; color:#fff;">FEAR // SOUL HUD</div>
+        <div class="nav-roster" id="navRoster"></div>
+      </div>
+      <div class="mode-switch" id="modeSwitch">
+        <button class="mode-pill active" data-meta="pve">PvE</button>
+        <button class="mode-pill" data-meta="pvp">PvP</button>
+      </div>
+    </nav>
+
+    <div class="hud-grid">
+      <aside class="panel">
+        <div class="resonance-box" id="resonanceBox"></div>
+        <div style="font-size:12px; color:var(--muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.06em;">
+          Chọn trang bị để soi chi tiết:
+        </div>
+        <div class="slot-list" id="slotList"></div>
+      </aside>
+
+      <section class="inspector-section">
+        <div class="panel detail-box" id="inspectorBox"></div>
+        <div class="panel">
+          <h3 class="fantasy-title" style="font-size:15px; margin-bottom:12px; color:#fff;">Arcana Deck</h3>
+          <div class="arcana-row" id="arcanaRow"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Subtle Three.js Aether Particle Field
+    (function init3D() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.THREE) return;
+      const canvas = document.getElementById('aether-canvas');
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+      camera.position.z = 5;
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      const count = 160;
+      const pos = new Float32Array(count * 3);
+      for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * 14;
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      const mat = new THREE.PointsMaterial({ color: 0x8b5cf6, size: 0.055, transparent: true, opacity: 0.65 });
+      const points = new THREE.Points(geo, mat);
+      scene.add(points);
+
+      function animate() {
+        requestAnimationFrame(animate);
+        points.rotation.y += 0.0007;
+        points.rotation.x += 0.0003;
+        renderer.render(scene, camera);
+      }
+      animate();
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    })();
+
+    const HEROES = {
+      TheAres: {
+        name: "TheAres", cls: "Gladiator Lv.45", cp: "193,032", ilvl: "2,998",
+        pve: {
+          score: 50, tier: "Stirring", pot: 67,
+          items: [
+            { prio:"high", name:"Splendent Ebony Dragon Lord Greatsword", slot:"Main hand (+15 ex+4)", score:"46 → 96", syncs:"~11 Syncs", remove:"Front Attack, Critical Attack, Ruinous Blow", target:"Might (100%), Weapon Damage Boost (100%), Damage Boost (99%), Precision (94%), Attack (84%)" },
+            { prio:"high", name:"Dark Dragon Lord Guard", slot:"Off hand (+15 ex+3)", score:"55 → 95", syncs:"~9 Syncs", remove:"Critical Hit, Front Attack", target:"Sát thương Meta Gladiator" },
+            { prio:"high", name:"Enraged Kromede Earrings (+14)", slot:"Earring", score:"56 → 81", syncs:"~7 Syncs", remove:"Defense", target:"Chỉ số tấn công / Skill Meta" },
+            { prio:"high", name:"Nuakum Breastplate (+11)", slot:"Torso", score:"19 → 94", syncs:"~22 Syncs", remove:"Critical Hit Resist, Evasion, Blood Absorption", target:"Chỉ số Meta Torso" },
+            { prio:"high", name:"Enraged Kromede Earrings (+10)", slot:"Earring", score:"38 → 88", syncs:"~15 Syncs", remove:"Natural MP Regen, Critical Hit Resist", target:"Chỉ số tấn công / Skill Meta" },
+            { prio:"med", name:"Nuakum Helm (+11)", slot:"Helmet", score:"19 → 94", syncs:"~23 Syncs", remove:"Natural HP Regen, Survival Willpower, Blood Absorption", target:"Chỉ số Meta Helmet" },
+            { prio:"med", name:"Nuakum Boots (+11)", slot:"Boots", score:"44 → 94", syncs:"~16 Syncs", remove:"Back Defense, Destructive Impulse", target:"Chỉ số Meta Boots" },
+            { prio:"med", name:"Nuakum Greaves (+11)", slot:"Pants", score:"63 → 88", syncs:"~9 Syncs", remove:"Evasion", target:"Chỉ số Meta Pants" },
+            { prio:"med", name:"Nuakum Pauldrons (+11)", slot:"Shoulders", score:"63 → 88", syncs:"~9 Syncs", remove:"Status Effect Resist", target:"Chỉ số Meta Shoulders" },
+            { prio:"med", name:"Enraged Kromede Ring (+15 ex+2)", slot:"Ring", score:"63 → 88", syncs:"~10 Syncs", remove:"HP", target:"Chỉ số Meta Ring" },
+            { prio:"med", name:"Nuakum Cloak (+12)", slot:"Cape", score:"25 → 100", syncs:"~28 Syncs", remove:"Willpower, Block, Critical Hit", target:"Chỉ số Meta Cape" },
+            { prio:"med", name:"Nuakum Gloves (+10)", slot:"Gloves", score:"25 → 100", syncs:"~28 Syncs", remove:"Willpower, Block, Status Effect Resist", target:"Chỉ số Meta Gloves" },
+            { prio:"rad", name:"Enraged Kromede Necklace (+15 ex+2)", slot:"Necklace", score:"94 Radiant", syncs:"0", remove:"Không cần xóa", target:"Đã chuẩn" },
+            { prio:"rad", name:"Enraged Kromede Ring (+11)", slot:"Ring", score:"88 Radiant", syncs:"0", remove:"Không cần xóa", target:"Đã chuẩn" }
+          ],
+          arcana: [
+            { name:"Mirror of Magic (+4)", tag:"Enchant +5", desc:"4/4 best skills" },
+            { name:"Bell of Vigor (+4)", tag:"Enchant +5", desc:"3/4 best skills" },
+            { name:"Chalice of Vigor (+5)", tag:"Keep", desc:"2/4 best (7% roll mới)" },
+            { name:"Compass of Magic (+5)", tag:"Keep", desc:"2/3 best skills" },
+            { name:"Parchment of Vigor (+5)", tag:"On meta", desc:"3/4 best skills" }
+          ]
+        }
+      },
+      KingDoggo: {
+        name: "KingDoggo", cls: "Templar Lv.45", cp: "208,318", ilvl: "3,041",
+        pve: {
+          score: 63, tier: "Strong", pot: 79,
+          items: [
+            { prio:"high", name:"Enraged Kromede Necklace (+15 ex+3)", slot:"Necklace", score:"65 → 85", syncs:"~6 Syncs", remove:"Guarding Seal", target:"Might (100%), Attack (100%), Precision (98%), Fury (83%)" },
+            { prio:"high", name:"Enraged Kromede Ring (+10)", slot:"Ring", score:"63 → 88", syncs:"~8 Syncs", remove:"HP", target:"Might (100%), Precision (98%), Attack (98%), Judgment (82%)" },
+            { prio:"high", name:"Nuakum Pauldrons (+15 ex+1)", slot:"Shoulders", score:"35 → 95", syncs:"~21 Syncs", remove:"Constitution, Status Effect Resist, HP", target:"Double Chance (100%), Attack (93%), Fury (82%)" },
+            { prio:"high", name:"Nuakum Helm (+15 ex+1)", slot:"Helmet", score:"44 → 94", syncs:"~18 Syncs", remove:"Accuracy, Ironclad Defense", target:"Double Chance (100%), Attack (93%), Fury (82%)" },
+            { prio:"high", name:"Nuakum Gloves (+15 ex+1)", slot:"Gloves", score:"25 → 100", syncs:"~28 Syncs", remove:"Multi-hit Resist, Regeneration, Punishing Benediction", target:"Perfect Chance (95%), Attack (95%), Fury (83%)" },
+            { prio:"med", name:"Nuakum Cloak (+10)", slot:"Cape", score:"63 → 88", syncs:"~9 Syncs", remove:"Constitution", target:"Attack increase (100%), Fury (82%)" },
+            { prio:"med", name:"Nuakum Breastplate (+10)", slot:"Torso", score:"44 → 94", syncs:"~20 Syncs", remove:"Constitution, Ironclad Defense", target:"Damage Boost (100%), Perfect Chance (93%)" },
+            { prio:"med", name:"Nuakum Boots (+10)", slot:"Boots", score:"63 → 88", syncs:"~11 Syncs", remove:"Perfect Resist", target:"Attack (95%), Perfect Chance (95%)" },
+            { prio:"med", name:"Enraged Kromede Earrings (+15 ex+2)", slot:"Earring", score:"63 → 88", syncs:"~13 Syncs", remove:"Defense", target:"Might (100%), Precision (98%)" },
+            { prio:"med", name:"Enraged Kromede Earrings (+15 ex+3)", slot:"Earring", score:"69 → 94", syncs:"~13 Syncs", remove:"Block Pain", target:"Might (100%), Precision (98%)" },
+            { prio:"med", name:"Nuakum Greaves (+10)", slot:"Pants", score:"69 → 94", syncs:"~16 Syncs", remove:"Enhance Health", target:"Attack increase (99%), Perfect Chance (94%)" },
+            { prio:"rad", name:"Longsword / Guard / Ring (2)", slot:"Main / Off / Ring", score:"88–96 Radiant", syncs:"0", remove:"Không cần xóa", target:"Đạt chuẩn Radiant" }
+          ],
+          arcana: [
+            { name:"Chalice of Magic (+5)", tag:"On meta", desc:"3/4 best skills" },
+            { name:"Parchment of Vigor (+5)", tag:"On meta", desc:"3/4 best skills" },
+            { name:"Compass of Vigor (+5)", tag:"On meta", desc:"3/4 best skills" },
+            { name:"Bell of Vigor (+5)", tag:"On meta", desc:"3/4 best skills" },
+            { name:"Mirror of Vigor (+5)", tag:"On meta", desc:"4/4 best skills" }
+          ]
+        },
+        pvp: {
+          score: 58, tier: "Strong", pot: 74,
+          items: [
+            { prio:"high", name:"Nuakum Breastplate (+10)", slot:"Torso", score:"56 → 81", syncs:"~6 Syncs", remove:"Constitution", target:"Damage Boost (99%), Perfect Chance (93%), Status Effect Resist (82%)" },
+            { prio:"high", name:"Enraged Kromede Earrings (+15 ex+2)", slot:"Earring", score:"38 → 88", syncs:"~13 Syncs", remove:"Defense, Fury", target:"Might (100%), Move Speed (100%), Precision (98%), Intelligence (88%)" },
+            { prio:"high", name:"Nuakum Boots (+10)", slot:"Boots", score:"44 → 94", syncs:"~16 Syncs", remove:"Perfect Resist, Insulting Roar", target:"Status Effect Resist (88%), Willpower (57%), Ironclad Defense (49%)" },
+            { prio:"high", name:"Nuakum Gloves (+15 ex+1)", slot:"Gloves", score:"25 → 100", syncs:"~24 Syncs", remove:"Multi-hit Resist, Regeneration, Punishing Benediction", target:"Attack (94%), Status Effect Resist (87%), Willpower (55%)" },
+            { prio:"high", name:"Enraged Kromede Earrings (+15 ex+3)", slot:"Earring", score:"63 → 88", syncs:"~8 Syncs", remove:"Block Pain", target:"Might (100%), Precision (98%), Intelligence (88%)" },
+            { prio:"med", name:"Enraged Kromede Necklace (+15 ex+3)", slot:"Necklace", score:"35 → 95", syncs:"~19 Syncs", remove:"Guarding Seal, Punishing Benediction, Insulting Roar", target:"Might (100%), Precision (98%), Intelligence (87%)" },
+            { prio:"med", name:"Nuakum Cloak (+10)", slot:"Cape", score:"63 → 88", syncs:"~10 Syncs", remove:"Constitution", target:"Status Effect Resist (87%), Weapon Damage Tolerance (85%)" },
+            { prio:"med", name:"Enraged Kromede Ring (+10)", slot:"Ring", score:"19 → 94", syncs:"~32 Syncs", remove:"HP, Shield Smite, Warding Strike", target:"Might (100%), Precision (98%), Judgment (68%)" },
+            { prio:"med", name:"Nuakum Pauldrons (+15 ex+1)", slot:"Shoulders", score:"55 → 95", syncs:"~17 Syncs", remove:"Constitution, HP", target:"Double Chance (100%), Dexterity (50%), Willpower (50%)" },
+            { prio:"med", name:"Nuakum Greaves (+10)", slot:"Pants", score:"69 → 94", syncs:"~12 Syncs", remove:"Enhance Health", target:"Endurance (83%), Status Effect Resist (81%)" },
+            { prio:"rad", name:"Nuakum Helm (+15 ex+1)", slot:"Helmet", score:"75 Radiant", syncs:"0", remove:"Không cần xóa", target:"PvP đạt sẵn 75 Radiant" }
+          ]
+        }
+      },
+      MusangKing: {
+        name: "MusangKing", cls: "Cleric Lv.45", cp: "227,390", ilvl: "3,218",
+        pve: {
+          score: 60, tier: "Strong", pot: 73,
+          items: [
+            { prio:"high", name:"Enraged Kromede Earrings (+12)", slot:"Earring", score:"44 → 94", syncs:"~9 Syncs", remove:"Critical Hit Resist, Block", target:"Might (100%), Attack (100%), Precision (98%), Critical Hit (93%)" },
+            { prio:"high", name:"Enraged Kromede Earrings (+15)", slot:"Earring", score:"63 → 88", syncs:"~6 Syncs", remove:"Survival Willpower", target:"Might (100%), Attack (100%), Precision (98%), Critical Hit (93%)" },
+            { prio:"high", name:"Enraged Kromede Ring (+15 ex+1)", slot:"Ring", score:"56 → 81", syncs:"~8 Syncs", remove:"Debilitating Mark", target:"Might (100%), Precision (98%), Attack (83%), Condemnation (73%)" },
+            { prio:"high", name:"Splendent Ebony Dragon Lord Gloves (+15 ex+2)", slot:"Gloves", score:"46 → 96", syncs:"~17 Syncs", remove:"Status Effect Resist, Endurance Penetration, Warm Benediction", target:"Attack (95%), Perfect Chance (91%), Earth's Grace (73%)" },
+            { prio:"high", name:"Nuakum Pauldrons (+15 ex+2)", slot:"Shoulders", score:"50 → 100", syncs:"~17 Syncs", remove:"Empyrean Lords' Benediction, Prayer of Concentration", target:"Attack (96%), Empyrean Lord's Grace (74%), Earth's Grace (73%)" },
+            { prio:"med", name:"Nuakum Greaves (+15 ex+1)", slot:"Pants", score:"44 → 94", syncs:"~18 Syncs", remove:"Block, Dexterity", target:"Chỉ số Meta Pants" },
+            { prio:"med", name:"Nuakum Cloak (+15 ex+1)", slot:"Cape", score:"25 → 100", syncs:"~26 Syncs", remove:"Block, Critical Hit Resist, Constitution", target:"Chỉ số Meta Cape" },
+            { prio:"med", name:"Splendent Ebony Dragon Lord Necklace (+15 ex+1)", slot:"Necklace", score:"55 → 95", syncs:"~16 Syncs", remove:"Evasion, Block", target:"Chỉ số Meta Necklace" },
+            { prio:"med", name:"Nuakum Boots (+15 ex+1)", slot:"Boots", score:"25 → 100", syncs:"~31 Syncs", remove:"Defense, Front Defense, Endurance Penetration", target:"Chỉ số Meta Boots" },
+            { prio:"med", name:"Nuakum Helm (+15 ex+1)", slot:"Helmet", score:"44 → 94", syncs:"~22 Syncs", remove:"Front Defense, Block", target:"Chỉ số Meta Helmet" },
+            { prio:"med", name:"Nuakum Breastplate (+15 ex+1)", slot:"Torso", score:"50 → 100", syncs:"~21 Syncs", remove:"HP, Status Effect Resist", target:"Chỉ số Meta Torso" },
+            { prio:"med", name:"Splendent Ebony Dragon Lord Guard (+15 ex+4)", slot:"Off hand", score:"83 → 100", syncs:"~7 Syncs", remove:"Accuracy", target:"Chỉ số Meta Off hand" },
+            { prio:"rad", name:"Mace / Ring (2) / Abyssal Bracelets", slot:"Main / Ring / Brac", score:"88–100 Radiant", syncs:"0", remove:"Không cần xóa", target:"Đạt chuẩn Radiant" }
+          ],
+          arcana: [
+            { name:"Chalice of Vigor (+5)", tag:"Keep", desc:"1/4 best (15% roll mới)" },
+            { name:"Parchment of Magic (+5)", tag:"On meta", desc:"3/4 best skills" },
+            { name:"Compass of Vigor (+5)", tag:"On meta", desc:"4/4 best skills" },
+            { name:"Bell of Magic (+5)", tag:"On meta", desc:"3/4 best skills" },
+            { name:"Mirror of Magic (+5)", tag:"On meta", desc:"4/4 best skills" }
+          ]
+        },
+        pvp: {
+          score: 66, tier: "Strong", pot: 82,
+          items: [
+            { prio:"high", name:"Nuakum Cloak (+15 ex+1)", slot:"Cape", score:"38 → 88", syncs:"~11 Syncs", remove:"Critical Hit Resist, Constitution", target:"Critical Damage Tolerance (86%), Attack (84%), Weapon Damage Tolerance (81%)" },
+            { prio:"high", name:"Nuakum Helm (+15 ex+1)", slot:"Helmet", score:"38 → 88", syncs:"~12 Syncs", remove:"Front Defense, Empyrean Lord's Grace", target:"Attack (93%), Incoming Heal (86%), Status Effect Resist (80%)" },
+            { prio:"high", name:"Nuakum Boots (+15 ex+1)", slot:"Boots", score:"25 → 100", syncs:"~21 Syncs", remove:"Defense, Front Defense, Endurance Penetration", target:"Attack (93%), Perfect Chance (91%), Status Effect Resist (78%)" },
+            { prio:"high", name:"Splendent Ebony Dragon Lord Necklace (+15 ex+1)", slot:"Necklace", score:"65 → 85", syncs:"~6 Syncs", remove:"Evasion", target:"Might (100%), Precision (98%), Immortal Veil (58%)" },
+            { prio:"high", name:"Nuakum Pauldrons (+15 ex+2)", slot:"Shoulders", score:"50 → 100", syncs:"~15 Syncs", remove:"Prayer of Concentration, Empyrean Lords' Benediction", target:"Attack (95%), Status Effect Resist (79%), Critical Hit (62%)" },
+            { prio:"med", name:"Enraged Kromede Earrings (+15)", slot:"Earring", score:"63 → 88", syncs:"~8 Syncs", remove:"Radiant Benediction", target:"Chỉ số PvP Earring" },
+            { prio:"med", name:"Splendent Ebony Dragon Lord Gloves (+15 ex+2)", slot:"Gloves", score:"46 → 96", syncs:"~18 Syncs", remove:"Endurance Penetration, Warm Benediction, Healing Enhancement", target:"Chỉ số PvP Gloves" },
+            { prio:"med", name:"Enraged Kromede Ring (+15 ex+1)", slot:"Ring", score:"56 → 81", syncs:"~10 Syncs", remove:"Debilitating Mark", target:"Chỉ số PvP Ring" },
+            { prio:"med", name:"Abyssal Bracelet (2)", slot:"Bracelet", score:"75 → 100", syncs:"~2 Syncs", remove:"Freedom [Vaizel]", target:"Chỉ số PvP Bracelet" },
+            { prio:"med", name:"Splendent Ebony Dragon Lord Guard (+15 ex+4)", slot:"Off hand", score:"83 → 100", syncs:"~5 Syncs", remove:"Accuracy", target:"Chỉ số PvP Off hand" },
+            { prio:"med", name:"Nuakum Breastplate (+15 ex+1)", slot:"Torso", score:"75 → 100", syncs:"~11 Syncs", remove:"HP", target:"Chỉ số PvP Torso" },
+            { prio:"rad", name:"Greaves & Earrings (+12)", slot:"Pants / Earring", score:"81 Radiant", syncs:"0", remove:"Không cần xóa", target:"PvP đạt sẵn 81 Radiant" }
+          ]
+        }
+      }
+    };
+
+    let state = { hero: "MusangKing", meta: "pve", selectedIdx: 0 };
+
+    function render() {
+      document.getElementById("navRoster").innerHTML = Object.values(HEROES).map(h => `
+        <button class="hero-tab ${h.name===state.hero?'active':''}" onclick="pickHero('${h.name}')">
+          <span class="ht-name">${h.name}</span>
+          <span class="ht-sub">${h.cls} · CP ${h.cp}</span>
+        </button>`).join("");
+
+      const h = HEROES[state.hero];
+      const hasPvp = Boolean(h.pvp);
+      const pvpBtn = document.querySelector('[data-meta="pvp"]');
+      pvpBtn.disabled = !hasPvp;
+      if (!hasPvp && state.meta === "pvp") {
+        state.meta = "pve";
+        document.querySelector('[data-meta="pve"]').classList.add("active");
+        pvpBtn.classList.remove("active");
+      }
+      const d = h[state.meta] || h.pve;
+      const pct = Math.min(100, d.score);
+      const dash = 226;
+      const offset = dash - (dash * pct) / 100;
+
+      document.getElementById("resonanceBox").innerHTML = `
+        <div class="ring-wrap">
+          <svg width="88" height="88" viewBox="0 0 88 88">
+            <circle cx="44" cy="44" r="36" fill="none" stroke="rgba(148,163,184,0.16)" stroke-width="8"/>
+            <circle cx="44" cy="44" r="36" fill="none" stroke="url(#gradHud)" stroke-width="8"
+              stroke-dasharray="${dash}" stroke-dashoffset="${offset}" stroke-linecap="round" transform="rotate(-90 44 44)"/>
+            <defs><linearGradient id="gradHud" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#38bdf8"/>
+            </linearGradient></defs>
+          </svg>
+          <div class="ring-text"><span class="ring-score">${d.score}</span><span class="ring-tier">${d.tier}</span></div>
+        </div>
+        <div>
+          <div class="fantasy-title" style="font-size:18px;font-weight:700;color:#fff;">${h.name}</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">${h.cls} · ${state.meta.toUpperCase()} Meta</div>
+          <div style="font-size:12px;color:var(--ice);margin-top:4px;">Tiềm năng: <strong>${d.pot}</strong> · iLvl ${h.ilvl}</div>
+        </div>`;
+
+      if (state.selectedIdx >= d.items.length) state.selectedIdx = 0;
+
+      document.getElementById("slotList").innerHTML = d.items.map((it, idx) => `
+        <div class="slot-item ${idx===state.selectedIdx?'selected':''}" onclick="pickItem(${idx})">
+          <div>
+            <div class="slot-name">${it.name}</div>
+            <div class="slot-sub">${it.slot} · ${it.score}</div>
+          </div>
+          <span class="slot-badge ${it.prio==='high'?'sb-high':it.prio==='med'?'sb-med':'sb-rad'}">
+            ${it.prio==='high'?'Ưu tiên':it.prio==='med'?'Làm sau':'Radiant'}
+          </span>
+        </div>`).join("");
+
+      const sel = d.items[state.selectedIdx];
+      document.getElementById("inspectorBox").innerHTML = `
+        <div class="detail-header">
+          <div>
+            <div style="font-size:12px;color:var(--ice);text-transform:uppercase;letter-spacing:0.08em;">${sel.slot}</div>
+            <h2 class="fantasy-title" style="font-size:22px;color:#fff;margin-top:2px;">${sel.name}</h2>
+          </div>
+          <span class="slot-badge ${sel.prio==='high'?'sb-high':sel.prio==='med'?'sb-med':'sb-rad'}">${sel.score} (${sel.syncs})</span>
+        </div>
+        <div class="remove-banner"><strong>Dòng cần xóa / thay:</strong> ${sel.remove}</div>
+        <div class="target-banner"><strong>Mục tiêu nên săn:</strong> ${sel.target}</div>`;
+
+      document.getElementById("arcanaRow").innerHTML = h.pve.arcana.map(a => `
+        <div class="arcana-tile">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <strong style="font-size:13px;color:#fff;">${a.name}</strong>
+            <span class="slot-badge ${a.tag.includes('Enchant')?'sb-high':a.tag==='On meta'?'sb-rad':'sb-med'}">${a.tag}</span>
+          </div>
+          <div style="font-size:12px;color:var(--muted);">${a.desc}</div>
+        </div>`).join("");
+
+      if (window.gsap) {
+        gsap.from("#inspectorBox", { opacity: 0, y: 10, duration: 0.25, ease: "power2.out" });
+      }
+    }
+
+    function pickHero(name) { state.hero = name; state.selectedIdx = 0; render(); }
+    function pickItem(idx) { state.selectedIdx = idx; render(); }
+
+    document.querySelectorAll(".mode-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (btn.disabled) return;
+        document.querySelectorAll(".mode-pill").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.meta = btn.dataset.meta;
+        state.selectedIdx = 0;
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>
